@@ -24,7 +24,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="carousel-content text-center">
-                                    <h2>Accessible design is good design. Only with <span>Color</span>.</h2>
+                                    <h2>SLIDE N 1<span>Color</span>.</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
                                     <!-- <a class="btn btn-primary btn-lg" href="#">Read More</a> -->
                                 </div>
@@ -40,7 +40,7 @@
                             <div class="col-md-12">
                                 <div class="carousel-content text-center">
 
-                                    <h2>OUR MAIN GOAL IS CONTINUOUSLY SATISFY OUR <span>Clients</span></h2>
+                                    <h2>SLIDE N2 <span>Clients</span></h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
                                     <!-- <a class="btn btn-primary btn-lg" href="#">Read More</a> -->
                                 </div>
@@ -77,8 +77,8 @@
     <section id="cta2">
         <div class="container">
             <div class="text-center">
-                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">YOU'VE MADE A brave DECISION, <span>WELCOME</span></h2>
-                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Mauris pretium auctor quam. Vestibulum et nunc id nisi fringilla <br />iaculis. Mauris pretium auctor quam.</p>
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">la esquina criolla <span>WELCOME</span></h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">NECESITO MONEY<br />Prueba prueba</p>
                 <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Get It Now</a></p>
             </div>
         </div>
