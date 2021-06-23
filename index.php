@@ -26,7 +26,7 @@
                                 <div class="carousel-content text-center">
                                     <h2>Accessible design is good design. Only with <span>Color</span>.</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
-                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                    <!-- <a class="btn btn-primary btn-lg" href="#">Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
 
                                     <h2>OUR MAIN GOAL IS CONTINUOUSLY SATISFY OUR <span>Clients</span></h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
-                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                    <!-- <a class="btn btn-primary btn-lg" href="#">Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                 <div class="carousel-content text-center">
                                     <h2>Accessible design is good design. Only with <span>Color</span>.</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
-                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                    <!-- <a class="btn btn-primary btn-lg" href="#">Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -68,89 +68,11 @@
         </div><!--/.owl-carousel-->
     </section><!--/#main-slider-->
 
-    <section id="about">
-        <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">WELCOME TO OUR COMPANY</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-
-            <div class="row">
-                
-
-                <div class="col-sm-6 wow fadeInRight">
-                    <h3 class="column-title">A Little More About Us</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-                    <a class="btn btn-primary" href="#">Discover Us</a>
-
-                </div>
-                <div class="col-sm-6 wow fadeInLeft">
-                    <img class="img-responsive" src="images/feature-2.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section><!--/#about-->
+   
 
 
 
-    <section id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Awesome Features</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 wow fadeInLeft">
-                    <img class="img-responsive" src="images/main-feature.png" alt="">
-                </div>
-                <div class="col-sm-6">
-                    <div class="media service-box wow fadeInRight">
-                        <div class="pull-left">
-                            <i class="fa fa-line-chart"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">UX design</h4>
-                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        </div>
-                    </div>
-
-                    <div class="media service-box wow fadeInRight">
-                        <div class="pull-left">
-                            <i class="fa fa-cubes"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">UI design</h4>
-                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        </div>
-                    </div>
-
-                    <div class="media service-box wow fadeInRight">
-                        <div class="pull-left">
-                            <i class="fa fa-pie-chart"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">SEO Services</h4>
-                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        </div>
-                    </div>
-
-                    <div class="media service-box wow fadeInRight">
-                        <div class="pull-left">
-                            <i class="fa fa-pie-chart"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">SEO Services</h4>
-                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <section id="cta2">
         <div class="container">
@@ -256,6 +178,20 @@
             </div><!--/.row-->    
         </div><!--/.container-->
     </section><!--/#services-->
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">YOU'VE MADE A brave DECISION, <span>WELCOME</span></h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Mauris pretium auctor quam. Vestibulum et nunc id nisi fringilla <br />iaculis. Mauris pretium auctor quam.</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Get It Now</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
     <section id="portfolio">
         <div class="container">
@@ -386,93 +322,7 @@
 
 
 
-    <section id="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-
-                <div id="carousel-testimonial" class="carousel slide text-center" data-ride="carousel">
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <p><img class="img-circle img-thumbnail" src="images/testimonial/01.jpg" alt=""></p>
-                                <h4>Louise S. Morgan</h4>
-                                <small>Treatment, storage, and disposal (TSD) worker</small>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam</p>
-                            </div>
-                            <div class="item">
-                                <p><img class="img-circle img-thumbnail" src="images/testimonial/01.jpg" alt=""></p>
-                                <h4>Louise S. Morgan</h4>
-                                <small>Treatment, storage, and disposal (TSD) worker</small>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam</p>
-                            </div>
-                        </div>
-
-                        <!-- Controls -->
-                        <div class="btns">
-                            <a class="btn btn-primary btn-sm" href="#carousel-testimonial" role="button" data-slide="prev">
-                                <span class="fa fa-angle-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="btn btn-primary btn-sm" href="#carousel-testimonial" role="button" data-slide="next">
-                                <span class="fa fa-angle-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!--/#testimonial-->
-
-
-
-
-
-    <section id="contact-area">
-        <div class="container">
-            <div class="row">
-                <div class="section-header">
-                    <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible;">Send Message</h2>
-                    <p class="text-center wow fadeInDown animated" style="visibility: visible;">Drop a line to us. Your word is most important to us.</p>
-                </div>
-                <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
-                    <div class="col-lg-6 animated animate-from-left" style="opacity: 1; left: 0px;">
-
-                        <div class="form-group">
-                                <label for="name">Your Name (Required)</label>
-                                <input id="name" type="text" name="name" class="form-control" placeholder="Name" required>
-                            </div>
-                        <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
-                            </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-6 animated animate-from-right" style="opacity: 1; right: 0px;">
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea name="message" id="message" class="form-control" rows="8" placeholder="Message" required></textarea>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="text-center">
-
-                          <button type="submit" class="btn btn-primary btn-lg btn-send-msg">Send Message</button>
-
-                    </div>
-
-                </form>
-
-            </div>
-        </div>
-                
-    </section><!--/#bottom-->
-
+  
     <?php require 'includes/footer.php'; ?>
 </body>
 </html>
