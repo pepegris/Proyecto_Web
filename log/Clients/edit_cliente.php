@@ -1,5 +1,6 @@
 <?php
-require 'php/conexion.php';
+require '../includes/log.php';
+require '../includes/conexion.php';
 
 
 
@@ -53,7 +54,7 @@ if (isset($_POST['update'])) {
 }
 
 ?>
-<?php include 'php/header.php';
+<?php include '../includes/header.php';
       //include 'php/menu.php'; ?>
 <div class="container p-4">
   <div class="row">
@@ -99,4 +100,8 @@ if (isset($_POST['update'])) {
     </div>
   </div>
 </div>
-<?php include('php/footer.php'); ?>
+
+
+
+</body>
+</html>

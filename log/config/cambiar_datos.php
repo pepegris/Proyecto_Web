@@ -1,9 +1,9 @@
 <?php
-
-include 'php/loading.php';
+  require '../includes/log.php';
+include '../includes/loading.php';
 
 if (isset($_POST)) {
-    require 'php/conexion.php';
+    require '../includes/conexion.php';
 
   //  var_dump($_POST);
     $empresa=isset($_POST ['empresa']) ? mysqli_real_escape_string($conn,$_POST['empresa']):false ;

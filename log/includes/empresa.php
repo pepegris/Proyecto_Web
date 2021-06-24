@@ -1,6 +1,6 @@
 <?php
 
-require 'php/conexion.php';
+require 'conexion.php';
 
 		
 		

@@ -47,7 +47,7 @@
                             <li ><a href="#about" >Productos</a></li>
                             <li ><a href="sobre_nosotros.php" >Sobre Nosotros</a></li>
                             <li ><a href="contactanos.php" >Contactanos</a></li>
-                            <li ><a href="" style="font-size: 21px ;"><i class="fa fa-users"></i></a></li>
+                            <li ><a href="log/index.php" style="font-size: 21px ;"><i class="fa fa-users"></i></a></li>
                            <!--  <li class="scroll"><a href="#portfolio" data-section="#portfolio">Portfolio</a></li>
                             <li class="scroll"><a href="#contact-area" data-section="#contact-area">Contact</a></li>  -->  
                         </ul>

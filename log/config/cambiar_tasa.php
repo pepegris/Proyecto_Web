@@ -1,9 +1,9 @@
 <?php
-
-include 'php/loading.php';
+ require '../includes/log.php';
+include '../includes/loading.php';
 
 if (isset($_POST)) {
-    require 'php/conexion.php';
+    require '../includes/conexion.php';
 
 
 

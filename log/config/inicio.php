@@ -1,10 +1,12 @@
+<?php  require 'includes/log.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/fondo.css">
+    
     
     <title>Inicio</title>
 </head>
@@ -34,7 +36,8 @@
 
 <?php
 
-require_once 'php/menu.php';
+require_once 'includes/menu.php';
+
 
 ?>
 
@@ -42,7 +45,7 @@ require_once 'php/menu.php';
     <div class="empresa">
        
         <?php
-                require 'php/empresa.php';
+                require 'includes/empresa.php';
 
                 
             ?>
@@ -50,6 +53,7 @@ require_once 'php/menu.php';
         <div class="card text-black mb-3" id="inf-empresa" >
             <div class="card-header" style="color:white;" >Datos de la empresa</div>
             <div class="card-body">
+            
             <h3 class="card-title"><?php echo "$empresa" ?></h3>
             
             <p class="card-text"><b>RIF: </b><?php echo "$rif" ?></p>
@@ -100,8 +104,6 @@ require_once 'php/menu.php';
 
 
 
-<?php
 
-require_once 'php/footer.php';
-
-?>
+    </body>
+</html>

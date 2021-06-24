@@ -1,3 +1,9 @@
+<?php 
+
+require '../includes/log.php';
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,8 +52,8 @@
 <?php
 
 
-require_once 'php/header.php';
-require_once 'php/menu.php';
+require_once '../includes/header.php';
+require_once '../includes/menu.php';
 
 ?>
 <body>
@@ -106,7 +112,7 @@ require_once 'php/menu.php';
         
         <?php
          
-          require 'php/conexion.php';
+          require '../includes/conexion.php';
 
           //CONSULTA DE CLIENTES
           $consulta="SELECT * FROM clientes";
@@ -166,13 +172,14 @@ require_once 'php/menu.php';
 
 
 <?php
-require_once 'php/excel.php';  
-require_once 'php/footer.php';
+require_once '../includes/excel.php';  
+
 
 ?>
 
 
-
+</body>
+</html>
 
 
 

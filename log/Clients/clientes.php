@@ -1,3 +1,4 @@
+<?php require '../includes/log.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +38,8 @@ form .fieldset .form-group input{
 <?php
 
 
-require_once 'php/header.php';
-require_once 'php/menu.php';
+require_once '../includes/header.php';
+require_once '../includes/menu.php';
 
 ?>
 <body>
@@ -88,12 +89,11 @@ require_once 'php/menu.php';
 <center><a href="clientes_registrados.php" class="btn btn-primary">Clientes ya registrados</a></center>
 <br><br>
 
-<?php
-//require_once 'php/excel.php';  
-require_once 'php/footer.php';
 
-?>
 
+
+</body>
+</html>
 
 
 

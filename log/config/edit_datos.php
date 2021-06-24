@@ -1,6 +1,7 @@
-<?php include 'php/header.php';
-
-        require 'php/conexion.php';
+<?php
+ require '../includes/log.php';
+include '../includes/header.php';
+require '../includes/conexion.php';
 
           $consulta="SELECT * FROM configuracion";
           $empresa=mysqli_query($conn,$consulta);
@@ -44,4 +45,7 @@
     </div>
   </div>
 </div>
-<?php include('php/footer.php'); ?>
+
+
+</body>
+</html>

@@ -1,11 +1,11 @@
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="./css/menu/app.css">
-  <link rel="stylesheet" href="./css/menu/animate.min.css">
+  <link rel="stylesheet" href="../css/menu/app.css">
+  <link rel="stylesheet" href="../css/menu/animate.min.css">
 
-
-  <link rel="stylesheet" href="./css/menu/style.css" />
+  <link rel="stylesheet" href="../css/fondo.css">
+  <link rel="stylesheet" href="../css/menu/style.css" />
 
 </head>
 
@@ -130,7 +130,7 @@
       </li>
 
       <li id="nav-item" class="nav-item">
-        <a href="clientes_registrados.php" id="nav-link" class="nav-link">
+        <a href="../Clients/clientes_registrados.php" id="nav-link" class="nav-link">
         <svg
             aria-hidden="true"
             focusable="false"
@@ -159,7 +159,7 @@
       </li>
 
       <li id="nav-item" class="nav-item">
-        <a href="clientes.php" id="nav-link" class="nav-link">
+        <a href="../Clients/clientes.php" id="nav-link" class="nav-link">
         <svg
             aria-hidden="true"
             focusable="false"
@@ -188,7 +188,7 @@
       </li>
 
       <li id="nav-item" class="nav-item" id="themeButton">
-        <a href="index.php" id="nav-link" class="nav-link">
+        <a href="includes/logout.php" id="nav-link" class="nav-link">
           <svg
             class="theme-icon"
             id="lightIcon"

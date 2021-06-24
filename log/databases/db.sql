@@ -63,5 +63,13 @@ CREATE TABLE reng_fact(
 
 
 
+create table usuario(  
+  id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  usuario VARCHAR(255) NOT NULL,
+  clave VARCHAR(200) NOT NULL,
+  fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  );
+
+  INSERT INTO  usuario VALUES (null,'admin','admin1',now());
 
 

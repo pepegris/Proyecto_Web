@@ -1,9 +1,17 @@
 <?php
+
+ 
+
+require '../includes/log.php';
+
+
+
+
 	
 	if (isset($_POST)) {
 		
-		require 'php/conexion.php';
-		require 'php/empresa.php';
+		require '../includes/conexion.php';
+		require '../includes/empresa.php';
 		$nombre=$_POST['nombre'];
 
 		if ($conn) {

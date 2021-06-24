@@ -1,4 +1,11 @@
+<?php
+session_start();
 
+session_unset();
+
+session_destroy();
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
     <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
      <!-- Estilos personal CSS -->
      <link rel="stylesheet" href="css/materialize/css/materialize.min.css">
      <link rel="stylesheet" href="css/login/animations.css">
