@@ -18,7 +18,7 @@
 
     <section id="main-slider">
         <div class="owl-carousel">
-            <div class="item" style="background-image: url(images/slider/bg1.jpg);">
+            <div class="item" style="background-image: url(images/slider/bg1.jpg);background-size: cover;">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url(images/slider/bg2.jpg);">
+            <div class="item" style="background-image: url(images/slider/bg2.jpg);background-size: cover;">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -55,7 +55,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="carousel-content text-center">
-                                    <h2>Accessible design is good design. Only with <span>Color</span>.</h2>
+                                    <h2>Slide3 <span>Color</span>.</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
                                     <!-- <a class="btn btn-primary btn-lg" href="#">Read More</a> -->
                                 </div>
@@ -83,12 +83,12 @@
             </div>
         </div>
     </section>
-
+<!-- SERVICIOS -->
     <section id="services" >
         <div class="container">
 
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Our Services</h2>
+                <h2 class="section-title text-center wow fadeInDown">Nuestros Servicios</h2>
                 <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
 
@@ -182,147 +182,17 @@
     <section id="cta2">
         <div class="container">
             <div class="text-center">
-                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">YOU'VE MADE A brave DECISION, <span>WELCOME</span></h2>
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">Nuestros <span>Productos</span></h2>
                 <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Mauris pretium auctor quam. Vestibulum et nunc id nisi fringilla <br />iaculis. Mauris pretium auctor quam.</p>
-                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Get It Now</a></p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Consiguelo Ahora</a></p>
             </div>
         </div>
     </section>
 
-
-
-
-
-    <section id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Our Works</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-
-            <div class="text-center">
-                <ul class="portfolio-filter">
-                    <li><a class="active" href="#" data-filter="*">All Works</a></li>
-                    <li><a href="#" data-filter=".animation">Animation</a></li>
-                    <li><a href="#" data-filter=".Business">Business</a></li>
-                    <li><a href="#" data-filter=".art">Art</a></li>
-                </ul><!--/#portfolio-filter-->
-            </div>
-
-            <div class="portfolio-items">
-                <div class="portfolio-item animation">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/portfolio/01.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 1</h3>
-                            <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto">
-                                <img src="images/portfolio/expand.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-
-                <div class="portfolio-item Business art">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/portfolio/02.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 2</h3>
-                            <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto">
-                                <img src="images/portfolio/expand.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item animation">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/portfolio/03.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 3</h3>
-                            <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto">
-                                <img src="images/portfolio/expand.png" alt="">
-
-                            </a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item Business">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/portfolio/04.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 4</h3>
-                            <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto">
-                                <img src="images/portfolio/expand.png" alt="">
-
-                            </a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item animation art">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/portfolio/05.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 5</h3>
-                            <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto">
-                                <img src="images/portfolio/expand.png" alt="">
-
-                            </a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item Business">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/portfolio/06.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 5</h3>
-                            <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto">
-                                <img src="images/portfolio/expand.png" alt="">
-
-                            </a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item animation art">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/portfolio/07.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 7</h3>
-                            <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto">
-                                <img src="images/portfolio/expand.png" alt="">
-
-                            </a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item Business">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/portfolio/08.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 8</h3>
-                            <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto">
-                                <img src="images/portfolio/expand.png" alt="">
-
-                            </a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-            </div>
-        </div><!--/.container-->
-    </section><!--/#portfolio-->
-
-
-
-
-
-
-
   
-    <?php require 'includes/footer.php'; ?>
+    <?php
+    require 'includes/portafolio.php';
+    require 'includes/footer.php'; 
+     ?>
 </body>
 </html>
