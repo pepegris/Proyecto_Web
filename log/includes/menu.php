@@ -14,7 +14,7 @@
   <nav id="navbar" class="navbar">
     <ul id="navbar-nav" class="navbar-nav">
       <li class="logo">
-        <a href="inicio.php" id="nav-link" class="nav-link">
+        <a href="../includes/inicio.php" id="nav-link" class="nav-link">
           <span class="link-text logo-text">Sistema</span>
           <svg
             aria-hidden="true"
@@ -188,7 +188,7 @@
       </li>
 
       <li id="nav-item" class="nav-item" id="themeButton">
-        <a href="includes/logout.php" id="nav-link" class="nav-link">
+        <a href="../includes/logout.php" id="nav-link" class="nav-link">
           <svg
             class="theme-icon"
             id="lightIcon"

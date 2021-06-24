@@ -1,4 +1,4 @@
-<?php  require 'includes/log.php'; ?>
+<?php  require '../includes/log.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +36,7 @@
 
 <?php
 
-require_once 'includes/menu.php';
+require_once '../includes/menu.php';
 
 
 ?>
@@ -45,7 +45,7 @@ require_once 'includes/menu.php';
     <div class="empresa">
        
         <?php
-                require 'includes/empresa.php';
+                require '../includes/empresa.php';
 
                 
             ?>
