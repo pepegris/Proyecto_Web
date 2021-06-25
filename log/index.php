@@ -37,7 +37,7 @@ session_destroy();
     <form class="slideUp" method="POST" action="auntenticando.php">
     <div id="login"class="z-depth-5"  >
             <div id="sistema" >
-                <h2>Jorinacha</h2>
+                <h2>Sistema</h2>
                 <div class="row">
                     <div class="col s12">
                       <div class="row">
@@ -70,7 +70,7 @@ session_destroy();
             
            <div class="derecha">
                 <div id="invitado">
-                    <h4>Ver Resumen Diario</h4>
+                    <!-- <h4>Ver Resumen Diario</h4> -->
                   
                     
                    </div>

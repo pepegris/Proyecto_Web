@@ -14,7 +14,7 @@
   <nav id="navbar" class="navbar">
     <ul id="navbar-nav" class="navbar-nav">
       <li class="logo">
-        <a href="../includes/inicio.php" id="nav-link" class="nav-link">
+        <a href="../router/inicio.php" id="nav-link" class="nav-link">
           <span class="link-text logo-text">Sistema</span>
           <svg
             aria-hidden="true"
@@ -43,7 +43,7 @@
       </li>
 
       <li id="nav-item" class="nav-item">
-        <a href="facturar_nueva.php" id="nav-link" class="nav-link">
+        <a href="#" id="nav-link" class="nav-link">
         <svg
             aria-hidden="true"
             focusable="false"
@@ -72,7 +72,7 @@
       </li>
 
       <li id="nav-item" class="nav-item">
-        <a href="factura.php" id="nav-link" class="nav-link">
+        <a href="#" id="nav-link" class="nav-link">
         <svg
             aria-hidden="true"
             focusable="false"
@@ -101,7 +101,7 @@
       </li>
 
       <li id="nav-item" class="nav-item">
-        <a href="articulos.php" id="nav-link" class="nav-link">
+        <a href="../router/articulos.php" id="nav-link" class="nav-link">
         <svg
             aria-hidden="true"
             focusable="false"
@@ -130,7 +130,7 @@
       </li>
 
       <li id="nav-item" class="nav-item">
-        <a href="../Clients/clientes_registrados.php" id="nav-link" class="nav-link">
+        <a href="../router/clientes.php" id="nav-link" class="nav-link">
         <svg
             aria-hidden="true"
             focusable="false"
@@ -159,7 +159,7 @@
       </li>
 
       <li id="nav-item" class="nav-item">
-        <a href="../Clients/clientes.php" id="nav-link" class="nav-link">
+        <a href="../router/registrar.php" id="nav-link" class="nav-link">
         <svg
             aria-hidden="true"
             focusable="false"
@@ -183,7 +183,7 @@
               ></path>
             </g>
           </svg>
-          <span id="link-text" class="link-text">Nuevo Clientes</span>
+          <span id="link-text" class="link-text">Nuevo Usuario</span>
         </a>
       </li>
 
