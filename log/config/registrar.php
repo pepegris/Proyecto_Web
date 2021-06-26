@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/fondo.css">
+    <link rel="stylesheet" href="../assets/css/fondo.css">
     
     <title>Registrar</title>
 </head>
@@ -33,6 +33,9 @@ form .fieldset{
 form .fieldset .form-group input{
   width: 60%;
 }
+form .fieldset .form-group span{
+  color: red;
+}
     
 </style>
 <?php
@@ -45,7 +48,7 @@ require_once '../includes/menu.php';
 <body>
  
 <div id="body">
-<form action="registrando.php" method="POST" >
+<form action="registrar_post.php" method="POST" >
   
     <div class="fieldset">
     <br>
@@ -56,30 +59,35 @@ require_once '../includes/menu.php';
       <input   type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" required>
     </div>
     <div class="form-group">
-      <label for="Usuario" class="form-label mt-2">Cuenta</label>
-      <input required name="Usuario" type="text" class="form-control" id="nombre" placeholder="Usuario" required>
+      <label for="email" class="form-label mt-2">Email</label>
+      <input required name="email" type="email" class="form-control" id="nombre" placeholder="email" required>
     </div>
     <div class="form-group">
       <label for="telefono" class="form-label mt-2">Telofono</label>
       <input required name="telefono" type="text" class="form-control" id="nombre" placeholder="Telefono" required>
     </div>
     <div class="form-group">
-      <label for="pass" class="form-label mt-2">Clave</label>
-      <input type="text" name="pass" class="form-control" placeholder="Clave" id="" required>
+      <label for="pass" class="form-label mt-2">Clave <span>{{comparando}}</span> </label>
+      <input v-model="clave1" type="text" name="pass" class="form-control" placeholder="Clave" id="" required>
+      <input v-model="clave2" type="text" name="pass" class="form-control" placeholder="Vuelve a Escribir la Clave" id="" required>
     </div>
     
    
  
     <br>
    
-    <center><button type="submit" class="btn btn-success">Save</button></center>
+    <center><div id="boton" v-html="boton"></div></center>
     <br>
+    
     </div>
 </form>
 
 
 
 
+<script src="../assets/js/vue.js"></script>
+<script src="../assets/js/vue@2.6.12"></script>
+<script src="../assets/js/vue_clave.js"></script>
 
 </body>
 </html>

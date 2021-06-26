@@ -18,29 +18,49 @@ include 'includes/loading.php';
     require 'includes/conexion.php';
     session_start();
 
-    $usuario = $_POST['user'];
-    $clave = $_POST['pass'];
+    $usuario = trim($_POST['user']);
+    $password = trim($_POST['pass']);
 
 
 
-    $sql = "SELECT count(*) as contar from usuario where usuario = '$usuario' and clave = '$clave'";
+    $sql = "SELECT * FROM usuario WHERE usuario ='$usuario'";
 
 $consulta=mysqli_query($conn,$sql);
-$array=array();
-$array=mysqli_fetch_array($consulta);
 
-if ($array['contar']>0) {
+if ($consulta && mysqli_num_rows($consulta)==1) {
 
-    $_SESSION['username']=$usuario;
 
-    header('refresh:3;url=  config/inicio.php');
-    
-    
+    //esto sacara un array del usuario de la base de dato
+    $cifrado = mysqli_fetch_assoc($consulta);
+
+    // comprobar la contraseña
+
+    $verifica= password_verify($password,$cifrado['clave']);
+
+    if ($verifica) {
+
+        $_SESSION['username']=$usuario;
+
+        if (isset($_SESSION['error_login'])) {
+            //borrar la sesion porque dio error
+            session_unset($_SESSION['error_login']);
+        }
+
+        header('refresh:3;url=  config/inicio.php');
+
+    }else {
+    header ("location:index.php");
+}
+
+
+
 }else {
     header ("location:index.php");
 }
 
-    
+
+
+ 
     
     
 } else {

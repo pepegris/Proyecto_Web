@@ -1,3 +1,11 @@
+<?php  require '../includes/log.php'; 
+
+if (isset($_POST)) {
+    
+    var_dump($_POST);
+    $co_art=$_POST['co_art'];
+    $linea_des=$_POST['linea_des'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +20,7 @@
     table{
         font-size: 25px;
         border: black solid;
+        margin-left: 4%;
         
         
     }
@@ -20,15 +29,10 @@
 </style>
 
 <?php
-if (isset($_POST)) {
-    require 'php/conexion.php';
-}else {
-    header('refresh:1;url= articulos.php');
-    exit;
-}
 
-require_once 'php/header.php';
-require_once 'php/menu.php';
+
+
+require_once '../includes/menu.php';
 
 ?>
 <body>
@@ -37,30 +41,54 @@ require_once 'php/menu.php';
         <thead style="background-color: black;">
           <tr class="table-secondary">
             <td>n°</td>
-            <td>Descripción</td>
             <td>Código</td>
+            <td>Linea</td>
             <td>Referencia</td>
             <td>Cantidad</td>
+            <td>Descripción</td>
             <td>Accion</td>
           </tr>
         </thead>
         <tbody>
         <?php
+         require '../includes/conexion.php';
          
-         $art_des=$_POST['art_des'];
-         if ($conn) {
+        
 
-            $sql= "SELECT * FROM art where art_des like '%$art_des%' ";
+            if ($linea_des=='todos') {
+
+              if ($co_art=='') {
+
+                $sql= "SELECT * FROM art  ";
+              }else {
+
+                $sql= "SELECT * FROM art where co_art like '%$co_art%' ";
+
+              }
+
+            }else {
+              
+              if ($co_art=='') {
+                
+                $sql= "SELECT * FROM art where  linea_des='$linea_des' ";
+
+              }else {
+
+                $sql= "SELECT * FROM art where co_art like '%$co_art%' and linea_des='$linea_des' ";
+              }
+              
+            }
  
             $buscar = mysqli_query($conn,$sql);
 
-          while($rowC=mysqli_fetch_assoc($buscar)) { 
+          while($rowC=mysqli_fetch_array($buscar)) { 
               
             $campo1=$rowC['id'];
-            $campo2=$rowC['art_des'];
-            $campo3=$rowC['co_art'];
+            $campo2=$rowC['co_art'];
+            $campo3=$rowC['linea_des'];
             $campo4=$rowC['ref_art'];
-            $campo5=$rowC['stock'];    
+            $campo5=$rowC['stock']; 
+            $campo6=$rowC['art_des'];   
             ?>
           <tr>
             <td><?php echo $campo1; ?></td>
@@ -68,6 +96,7 @@ require_once 'php/menu.php';
             <td><?php echo $campo3; ?></td>
             <td><?php echo $campo4; ?></td>
             <td><?php echo $campo5; ?></td>
+            <td><?php echo $campo6; ?></td>
             <td>
               <a href='edit.php?id=<?php echo $campo1?>' class='btn btn-info'>
                 <i class='fas fa-marker'></i>
@@ -77,9 +106,7 @@ require_once 'php/menu.php';
               </a>
             </td>
           </tr>
-          <?php } }else {
-        header('refresh:5;url= articulos.php');
-        exit;}?>
+          <?php } ?>
 
 
 
@@ -95,8 +122,13 @@ require_once 'php/menu.php';
 
       <?php
 
-require_once 'php/excel.php';      
+require_once '../includes/excel.php';      
 
-require_once 'php/footer.php';
+}else {
+  header('refresh:1;url= articulos.php');
+  exit;
+}
 
 ?>
+</body>
+</html>

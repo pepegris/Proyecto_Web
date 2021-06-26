@@ -1,3 +1,4 @@
+<?php  require '../includes/log.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +38,9 @@
 <?php
 
 
-require_once '../includes/header.php';
 require_once '../includes/menu.php';
+require '../includes/conexion.php';
+
 
 ?>
 <body>
@@ -54,19 +56,42 @@ require_once '../includes/menu.php';
     <h2>Registrar Articulos</h2>
       <div class="card-body">
 
-        <form action="articulo_post.php" method="POST" >
+        <form action="articulo_post.php" method="POST" enctype="multipart/form-data"  >
         <center>
-          <div class="form-group">
-            <input type="text" style="width: 95%;" name="art_des" placeholder="Descripción" class="form-control" autofocus required>
-          </div>
+          
           <div class="form-group">
             <input type="text"style="width: 95%;" name="co_art" placeholder="Código" class="form-control" required>
           </div>
           <div class="form-group">
-            <input type="number" style="width: 95%;"  name="ref_art" placeholder="Referencia" class="form-control" required>
+           <select name="linea_des" id="" style="width: 95%; background-color:white;"  placeholder="Código" class="form-control">
+                <?php 
+                
+                $sql_linea="SELECT linea_des FROM linea";
+                $consulta_linea=mysqli_query($conn,$sql_linea);
+                
+                while ( $res_linea=mysqli_fetch_array($consulta_linea) ) {
+
+                  $linea=$res_linea['linea_des'];
+          
+                ?>
+
+                <option value="<?=$linea?>"><?=$linea?></option>
+
+                <?php }; ?>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="number" style="width: 95%;"  name="ref_art" placeholder="Referencia $" class="form-control" required>
           </div>
           <div class="form-group">
             <input type="number" style="width: 95%;" name="stock" placeholder="Cantidad" class="form-control" required>
+          </div>   
+          <div class='form-group'>          
+           <input type='file'style="width: 95%;" class='form-control' name='imagen' size='100' id='' required>
+          </div>
+          <div class="form-group">
+           <textarea style="width: 95%;" name="art_des" placeholder="Descripción" class="form-control"  requiredcols='15' rows='3' required ></textarea>
+            
           </div>
       
          <button type="submit" class="btn btn-primary">
@@ -84,13 +109,45 @@ require_once '../includes/menu.php';
         <form action="articulo_get.php" method="POST" >
         <center>
           <div class="form-group">
-            <input type="text" style="width: 95%;" name="art_des" placeholder="Descripción" class="form-control" autofocus>
+          <label for="co_art">Nombre</label>
+            <input type="text" style="width: 95%;" name="co_art" placeholder="Descripción" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+          <label for="linea_des">Linea</label>
+           <select name="linea_des" id="" style="width: 95%; background-color:white;"  placeholder="Código" class="form-control">
+                  <option value="todos">Todas</option>
+                <?php 
+                
+                $sql_linea="SELECT linea_des FROM linea";
+                $consulta_linea=mysqli_query($conn,$sql_linea);
+                
+                while ( $res_linea=mysqli_fetch_array($consulta_linea) ) {
+
+                  $linea=$res_linea['linea_des'];
+          
+                ?>
+
+                <option value="<?=$linea?>"><?=$linea?></option>
+
+                <?php }; ?>
+            </select>
+          </div>
+         <button type="submit" class="btn btn-primary">
+            Search
+          </button></center>
+        </form>
+        <h2>Linea Articulo</h2>
+        <form action="linea_post.php" method="POST" >
+        <center>
+          <div class="form-group">
+          <label for="linea_des">Agregar Linea</label>
+            <input type="text" style="width: 95%;" name="linea_des" placeholder="Descripción" class="form-control" autofocus>
           </div>
        
           
       
          <button type="submit" class="btn btn-primary">
-            Search
+            Save
           </button></center>
         </form>
       </div>
@@ -106,8 +163,9 @@ require_once '../includes/menu.php';
         <thead >
           <tr class="table-secondary">
             
-            <td>Descripción</td>
+            
             <td>Código</td>
+            <td>Linea</td>
             <td>Precio</td>
             <td>Referencia</td>
             <td>Cantidad</td>
@@ -119,7 +177,7 @@ require_once '../includes/menu.php';
         
         <?php
          
-          require '../includes/conexion.php';
+         
 
           //CONSULTA DE ARTICULOS
           $consulta="SELECT * FROM art";
@@ -134,8 +192,8 @@ require_once '../includes/menu.php';
 
           while($rowC=mysqli_fetch_assoc($runC)) { 
             $campo1=$rowC['id'];
-            $campo2=$rowC['art_des'];
-            $campo3=$rowC['co_art'];
+            $campo2=$rowC['co_art'];
+            $campo3=$rowC['linea_des'];
             $campo4=$rowC['ref_art'];
                 $total=$campo4*$dolar;
                 $bolivares=number_format($total, 2, ',', '.');
@@ -217,9 +275,11 @@ require_once '../includes/menu.php';
 
 <?php
 require_once '../includes/excel.php';  
-require_once '../includes/footer.php';
+
 
 ?>
+</body>
+</html>
 
 
 

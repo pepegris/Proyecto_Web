@@ -1,6 +1,6 @@
 <?php
-
-require 'php/conexion.php';
+  require '../includes/log.php'; 
+require '../includes/conexion.php';
 
 if(isset($_GET['id'])) {
   $id = $_GET['id'];

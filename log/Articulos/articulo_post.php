@@ -1,57 +1,105 @@
 
 <?php
 
-
+require '../includes/log.php';
 include '../includes/loading.php';
 
 
 
-if (isset($_POST)) {
+if (isset($_FILES) && isset($_POST)) {
     require '../includes/conexion.php';
 
-  // var_dump($_POST);
-   
-   /*   $art_des=$_POST['art_des'];
-    $co_art=$_POST['co_art'];
-    $ref_art=$_POST['ref_art'];
-    $stock=$_POST['stock'];  */ 
+    $nombre_imagen = $_FILES['imagen']['name'];
+    $tipo_imagen   = $_FILES['imagen']['type'];
+    $tam_imagen    = $_FILES['imagen']['size'];
 
-    
+
     $art_des=isset($_POST ['art_des']) ? mysqli_real_escape_string($conn,$_POST['art_des']):false ;
     $co_art=isset ($_POST ['co_art']) ? mysqli_real_escape_string($conn,$_POST ['co_art'] ): false ;
     $ref_art=isset($_POST ['ref_art']) ? mysqli_real_escape_string($conn,trim($_POST ['ref_art'])) : false;
     $stock=isset($_POST ['stock']) ? mysqli_real_escape_string($conn,trim($_POST ['stock'])) :false;
+    $linea_des=isset($_POST ['linea_des']) ? mysqli_real_escape_string($conn,$_POST['linea_des']):false ;
 
+    if ($tam_imagen <= 10000000) {
 
-    if ($conn) {
-        $sql= "INSERT INTO art VALUES (null,'$art_des','$co_art',$ref_art,null,null,$stock,now())";
- 
-        $guardar = mysqli_query($conn,$sql);
-
-        if (!$guardar) {
-           
-           $error= mysqli_error($conn);
-           echo "<br><center><h3>ERROR</h3></center>";
-           echo "<h4>$error</h4>";
-
+        if ($tipo_imagen=="image/jpeg" or $tipo_imagen=="image/jpg" or $tipo_imagen=="image/png" or $tipo_imagen=="image/gif"  ) {
             
-           echo "<a href='inicio.php' class='btn btn-danger'>Salir</a>";
-           die();
-           
+
+            //ruta del destino del servidor
+            $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/Proyecto_Web/log/uploads/img/';
+
+            //almacenando nombre y direccion de la imagen
+
+            $art_img=$co_art.'_'.$nombre_imagen;
+
+          
             
+
+            //insertando datos en la base de dato
+
+            if ($conn) {
+
+
+               $sql= "INSERT INTO art VALUES (null,'$co_art','$linea_des',$ref_art,null,null,$stock,null,'$art_des','$art_img',null,null,null,'$cuenta_on',now())";
+
+                $guardar = mysqli_query($conn,$sql);
+
+                
+
+                            if (!$guardar) {
+
+
+                            //mandando mensaje de error de la base de datos
+                            
+                            $error= mysqli_error($conn);
+                            echo "<br><center><h3>ERROR</h3></center>";
+                            echo "<h4>$error</h4>";
+                    
+                                
+                            echo "<a href='articulos.php' class='btn btn-danger'>Salir</a>";
+                            die();
+                            
+                                
+                            }else {
+
+                                //mover imagen a directorio temporal
+                                move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta.$art_img);
+                                header('refresh:2;url= articulos.php');
+                                exit;
+                            }
+        
+                    
+        
+            } else {
+                
+                                
+                            echo "<a href='articulos.php' class='btn btn-danger'>Salir</a>";
+                            die("La conexión ha fallado: " . mysqli_connect_error());
+            }
+
+
+
+
+
         }else {
-            header('refresh:2;url= articulos.php');
-            exit;
+            echo "<center><h3>Por favor suba una imagen valida /JPG/JPEG/PNG/GIF: </h3> <p>$tipo_imagen</p></center>";
+            echo "<a href='articulos.php' class='btn btn-danger'>Salir</a>";
+                            die();
         }
 
-            
- 
+
+    }else {
+        echo "<center><h3>Ingrese una imagen de un tamnaño inferior a 10MB: </h3> <p>$tam_imagen</p></center>";
+        echo "<a href='articulos.php' class='btn btn-danger'>Salir</a>";
+                        die();
     }
+
+  
   
 
    
 } else{
-    header('refresh:2;url= articulos.php');
+    header('location: articulos.php');
     exit;
 }
 

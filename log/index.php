@@ -14,21 +14,21 @@ session_destroy();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
     <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
      <!-- Estilos personal CSS -->
-     <link rel="stylesheet" href="css/materialize/css/materialize.min.css">
-     <link rel="stylesheet" href="css/login/animations.css">
-     <link rel="stylesheet" href="css/login/a_estilo.css" >
+     <link rel="stylesheet" href="assets/css/materialize/css/materialize.min.css">
+     <link rel="stylesheet" href="assets/css/login/animations.css">
+     <link rel="stylesheet" href="assets/css/login/a_estilo.css" >
   
  
   </head>
   <style>
   body {
-    background-image: url('./img/thumb-1920-3827.jpg');
+    background-image: url('assets/img/thumb-1920-3827.jpg');
     background-size: cover;
   }
   .derecha{
-    background-image: url('./img/thumb-1920-373.jpg');
+    background-image: url('assets/img/thumb-1920-373.jpg');
     background-size: cover;
   }
 
@@ -89,7 +89,7 @@ session_destroy();
     
     
 
-    <script src="css/materialize/js/materialize.min.js"></script>
+    <script src="../assets/css/materialize/js/materialize.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
   </body>

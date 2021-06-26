@@ -12,13 +12,13 @@
 <body id="home" class="homepage">
 
 
-    <?php require 'includes/header.php'; ?>
+    <?php require 'assets/includes/header.php'; ?>
 
 
 
     <section id="main-slider">
         <div class="owl-carousel">
-            <div class="item" style="background-image: url(images/slider/bg1.jpg);background-size: cover;">
+            <div class="item" style="background-image: url(assets/images/slider/bg1.jpg);background-size: cover;">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url(images/slider/bg2.jpg);background-size: cover;">
+            <div class="item" style="background-image: url(assets/images/slider/bg2.jpg);background-size: cover;">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url(images/slider/bg3.jpg);">
+            <div class="item" style="background-image: url(assets/images/slider/bg3.jpg);">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -191,8 +191,8 @@
 
   
     <?php
-    require 'includes/portafolio.php';
-    require 'includes/footer.php'; 
+    require 'assets/includes/portafolio.php';
+    require 'assets/includes/footer.php'; 
      ?>
 </body>
 </html>

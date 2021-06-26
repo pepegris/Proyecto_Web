@@ -40,6 +40,7 @@ form .fieldset .form-group input{
 
 require_once '../includes/header.php';
 require_once '../includes/menu.php';
+include 'includes/ico_buscar.php';
 
 ?>
 <body>
@@ -56,7 +57,7 @@ require_once '../includes/menu.php';
       <input   type="text" name="nombre" class="form-control" id="nombre" placeholder="Name" required>
     </div>
     <div class="form-group">
-      <label for="ci" class="form-label mt-2">Cedula</label>
+      <label for="ci" class="form-label mt-2">Cedula - RIF</label>
       <input required name="ci" type="text" class="form-control" id="nombre" placeholder="CI">
     </div>
     <div class="form-group">
@@ -86,8 +87,7 @@ require_once '../includes/menu.php';
 </form>
 
 </div>
-<center><a href="clientes_registrados.php" class="btn btn-primary">Clientes ya registrados</a></center>
-<br><br>
+
 
 
 

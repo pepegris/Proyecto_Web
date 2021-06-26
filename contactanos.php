@@ -12,7 +12,7 @@
 <body id="home" class="homepage">
 
 
-    <?php require 'includes/header.php'; ?>
+    <?php require 'assets/includes/header.php'; ?>
 
 
 
@@ -104,7 +104,7 @@
   
     <?php
     
-    require 'includes/footer.php'; 
+    require 'assets/includes/footer.php'; 
      ?>
 </body>
 </html>

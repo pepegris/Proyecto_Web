@@ -27,7 +27,7 @@ if (isset($_POST)) {
     $direccion=isset ($_POST ['direccion']) ? mysqli_real_escape_string($conn,$_POST ['direccion'] ): false ;
 
     if ($conn) {
-        $sql= "INSERT INTO clientes VALUES (null,'$nombre','$ci','$numero','$email','$direccion','$informe',null,now())";
+        $sql= "INSERT INTO clientes VALUES (null,'$nombre','$ci','$numero','$email','$direccion','$informe',null,'$cuenta_on',now())";
  
         $guardar = mysqli_query($conn,$sql);
 

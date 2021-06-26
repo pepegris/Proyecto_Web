@@ -12,7 +12,7 @@
 <body id="home" class="homepage">
 
 
-    <?php require 'includes/header.php'; ?>
+    <?php require 'assets/includes/header.php'; ?>
 
 
 
@@ -64,7 +64,7 @@
 
             </div>
             <div class="col-sm-6 wow fadeInLeft">
-                <img class="img-responsive" src="images/slider/2w.jpg" alt="">
+                <img class="img-responsive" src="assets/images/slider/2w.jpg" alt="">
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@
         </div>
         <div class="row">
             <div class="col-sm-6 wow fadeInLeft">
-                <img class="img-responsive" src="images/slider/2131.jpeg" alt="">
+                <img class="img-responsive" src="assets/images/slider/2131.jpeg" alt="">
             </div>
             <div class="col-sm-6">
                 <div class="media service-box wow fadeInRight">
@@ -151,7 +151,7 @@
   
     <?php
     
-    require 'includes/footer.php'; 
+    require 'assets/includes/footer.php'; 
      ?>
 </body>
 </html>

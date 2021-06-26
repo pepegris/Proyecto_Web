@@ -1,11 +1,14 @@
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="../css/menu/app.css">
-  <link rel="stylesheet" href="../css/menu/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/menu/app.css">
+  <link rel="stylesheet" href="../assets/css/menu/animate.min.css">
 
-  <link rel="stylesheet" href="../css/fondo.css">
-  <link rel="stylesheet" href="../css/menu/style.css" />
+  <link rel="stylesheet" href="../assets/css/fondo.css">
+  <link rel="stylesheet" href="../assets/css/menu/style.css" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 
 </head>
 
@@ -268,5 +271,5 @@
       </li>
     </ul>
   </nav>
-  <script defer src="./css/menu/theme.js"></script>
+  <script defer src=""></script>
 

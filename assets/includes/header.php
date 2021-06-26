@@ -1,16 +1,16 @@
 
 <!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/prettyPhoto.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
 
-    <link href="images/ico/ico.png" rel="icon">
-  <link href="images/ico/ico.png" rel="apple-touch-icon">
+    <link href="assets/images/ico/ico.png" rel="icon">
+  <link href="assets/images/ico/ico.png" rel="apple-touch-icon">
 
 
   
@@ -33,7 +33,7 @@
                     <!-- logo -->
                     <div class="navbar-brand">
                         <a href="index.php" >
-                            <img src="images/logo.png" alt="">
+                            <img src="assets/images/logo.png" alt="">
                         </a>
                     </div>
                     <!-- /logo -->

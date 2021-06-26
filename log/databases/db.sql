@@ -7,15 +7,28 @@ use sis_control;
 -- creating a new table
 CREATE TABLE art (
   id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  art_des VARCHAR(255) NOT NULL,
   co_art VARCHAR(200) NOT NULL unique,
+  linea_des VARCHAR(200) NOT NULL,
   ref_art INT NOT NULL,
   prec_vta1 INT  ,
   prec_vta2 INT  ,
   stock INT NOT NULL,
+  stock2 INT ,
+  art_des VARCHAR(255) NOT NULL,
+  img1 varchar (200) not null,
+  img2 varchar (200) ,
+  img3 varchar (200) ,
+  img4 varchar (200) ,
+  auditoria VARCHAR (200) not null,
   fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP 
 );
 
+CREATE TABLE linea (
+  id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  linea_des VARCHAR(200) NOT NULL unique,
+  fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP 
+
+);
 
 CREATE TABLE configuracion (
   ref INT(10) UNIQUE,
@@ -40,11 +53,29 @@ CREATE TABLE clientes (
   direccion VARCHAR (255),
   informe VARCHAR (255),
   deuda VARCHAR (255),
+  auditoria VARCHAR (200) not null,
   fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP 
 );
 
--- FACTURA
-CREATE TABLE facturas(
+
+
+
+
+create table usuario(  
+  id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  usuario VARCHAR(150) UNIQUE NOT NULL,
+  correo varchar (200) not null,
+  clave VARCHAR(200) NOT NULL,
+  telefono VARCHAR(150),
+  auditoria VARCHAR (200) not null,
+  fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  );
+
+  INSERT INTO  usuario VALUES (null,'admin','correo@gmail.com','admin1','5763421','auditor',now());
+
+
+  -- FACTURA
+/* CREATE TABLE facturas(
   id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
   fac_des VARCHAR(255) NOT NULL,
   total_bruto INT NOT NULL,
@@ -60,16 +91,6 @@ CREATE TABLE reng_fact(
   fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
    FOREIGN KEY(id) REFERENCES facturas(id)
 )
-
-
-
-create table usuario(  
-  id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  usuario VARCHAR(255) NOT NULL,
-  clave VARCHAR(200) NOT NULL,
-  fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-  );
-
-  INSERT INTO  usuario VALUES (null,'admin','admin1',now());
+ */
 
 
