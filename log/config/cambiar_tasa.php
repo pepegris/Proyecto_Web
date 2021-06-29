@@ -8,8 +8,8 @@ if (isset($_POST)) {
 
 
     
-    $tasa=isset($_POST ['tasa_dia']) ? mysqli_real_escape_string($conn,trim($_POST ['tasa_dia'])) :false;
-    $iva=isset($_POST ['iva']) ? mysqli_real_escape_string($conn,trim($_POST ['iva'])) :false;
+    $tasa=isset($_POST ['tasa_dia']) ? pg_escape_string($conn,trim($_POST ['tasa_dia'])) :false;
+    $iva=isset($_POST ['iva']) ? pg_escape_string($conn,trim($_POST ['iva'])) :false;
 
 
     if ($conn) {
@@ -24,11 +24,11 @@ if (isset($_POST)) {
 
                         $sql= "UPDATE configuracion SET tasa_dia=$tasa WHERE ref =0 ";
                 
-                        $guardar = mysqli_query($conn,$sql);
+                        $guardar = pg_query($conn,$sql);
 
                         if (!$guardar) {
                             
-                            $error= mysqli_error($conn);
+                            $error= pg_error($conn);
                             
                             echo "<br><center><h3>ERROR</h3></center>";
                             echo "<h4>$error</h4>";   
@@ -45,11 +45,11 @@ if (isset($_POST)) {
 
                         $sql= "UPDATE configuracion SET iva=$iva WHERE ref =0 ";
                 
-                        $guardar = mysqli_query($conn,$sql);
+                        $guardar = pg_query($conn,$sql);
 
                         if (!$guardar) {
                         
-                            $error= mysqli_error($conn);
+                            $error= pg_error($conn);
                             echo "<br><center><h3>ERROR</h3></center>";
                             echo "<h4>$error</h4>";
                             echo "<a href='inicio.php' class='btn btn-danger'>Salir</a>";

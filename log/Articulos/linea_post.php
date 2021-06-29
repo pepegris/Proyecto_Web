@@ -11,17 +11,17 @@ if (isset($_POST)) {
 
 
     
-    $linea_des=isset($_POST ['linea_des']) ? mysqli_real_escape_string($conn,$_POST['linea_des']):false ;
+    $linea_des=isset($_POST ['linea_des']) ? pg_escape_string($conn,$_POST['linea_des']):false ;
     
 
     if ($conn) {
-        $sql= "INSERT INTO linea VALUES (null,'$linea_des',now())";
+        $sql= "INSERT INTO linea (linea_des,fecha) VALUES ('$linea_des',now())";
  
-        $guardar = mysqli_query($conn,$sql);
+        $guardar = pg_query($conn,$sql);
 
         if (!$guardar) {
            
-           $error= mysqli_error($conn);
+           $error= pg_error($conn);
            echo "<center><h3>ERROR</h3>";
            echo "<h4>$error</h4>";
 

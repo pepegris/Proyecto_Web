@@ -14,11 +14,11 @@ if (isset($_FILES) && isset($_POST)) {
     $tam_imagen    = $_FILES['imagen']['size'];
 
 
-    $art_des=isset($_POST ['art_des']) ? mysqli_real_escape_string($conn,$_POST['art_des']):false ;
-    $co_art=isset ($_POST ['co_art']) ? mysqli_real_escape_string($conn,$_POST ['co_art'] ): false ;
-    $ref_art=isset($_POST ['ref_art']) ? mysqli_real_escape_string($conn,trim($_POST ['ref_art'])) : false;
-    $stock=isset($_POST ['stock']) ? mysqli_real_escape_string($conn,trim($_POST ['stock'])) :false;
-    $linea_des=isset($_POST ['linea_des']) ? mysqli_real_escape_string($conn,$_POST['linea_des']):false ;
+    $art_des=isset($_POST ['art_des']) ? pg_escape_string($conn,$_POST['art_des']):false ;
+    $co_art=isset ($_POST ['co_art']) ? pg_escape_string($conn,$_POST ['co_art'] ): false ;
+    $ref_art=isset($_POST ['ref_art']) ? pg_escape_string($conn,trim($_POST ['ref_art'])) : false;
+    $stock=isset($_POST ['stock']) ? pg_escape_string($conn,trim($_POST ['stock'])) :false;
+    $linea_des=isset($_POST ['linea_des']) ? pg_escape_string($conn,$_POST['linea_des']):false ;
 
     if ($tam_imagen <= 10000000) {
 
@@ -40,9 +40,11 @@ if (isset($_FILES) && isset($_POST)) {
             if ($conn) {
 
 
-               $sql= "INSERT INTO art VALUES (null,'$co_art','$linea_des',$ref_art,null,null,$stock,null,'$art_des','$art_img',null,null,null,'$cuenta_on',now())";
 
-                $guardar = mysqli_query($conn,$sql);
+               $sql= "INSERT INTO art (co_art,linea_des,ref_art,prec_vta1,prec_vta2,stock,stock2,art_des,img1,img2,img3,img4,auditoria,fecha) 
+                        VALUES ('$co_art','$linea_des',$ref_art,null,null,$stock,null,'$art_des','$art_img',null,null,null,'$cuenta_on',now())";
+
+                $guardar = pg_query($conn,$sql);
 
                 
 
@@ -51,7 +53,7 @@ if (isset($_FILES) && isset($_POST)) {
 
                             //mandando mensaje de error de la base de datos
                             
-                            $error= mysqli_error($conn);
+                            $error= pg_error($conn);
                             echo "<br><center><h3>ERROR</h3></center>";
                             echo "<h4>$error</h4>";
                     
@@ -74,7 +76,7 @@ if (isset($_FILES) && isset($_POST)) {
                 
                                 
                             echo "<a href='articulos.php' class='btn btn-danger'>Salir</a>";
-                            die("La conexión ha fallado: " . mysqli_connect_error());
+                            die("La conexión ha fallado: " . pg_connect_error());
             }
 
 

@@ -67,9 +67,9 @@ require '../includes/conexion.php';
                 <?php 
                 
                 $sql_linea="SELECT linea_des FROM linea";
-                $consulta_linea=mysqli_query($conn,$sql_linea);
+                $consulta_linea=pg_query($conn,$sql_linea);
                 
-                while ( $res_linea=mysqli_fetch_array($consulta_linea) ) {
+                while ( $res_linea=pg_fetch_array($consulta_linea) ) {
 
                   $linea=$res_linea['linea_des'];
           
@@ -119,9 +119,9 @@ require '../includes/conexion.php';
                 <?php 
                 
                 $sql_linea="SELECT linea_des FROM linea";
-                $consulta_linea=mysqli_query($conn,$sql_linea);
+                $consulta_linea=pg_query($conn,$sql_linea);
                 
-                while ( $res_linea=mysqli_fetch_array($consulta_linea) ) {
+                while ( $res_linea=pg_fetch_array($consulta_linea) ) {
 
                   $linea=$res_linea['linea_des'];
           
@@ -181,16 +181,16 @@ require '../includes/conexion.php';
 
           //CONSULTA DE ARTICULOS
           $consulta="SELECT * FROM art";
-          $runC=mysqli_query($conn,$consulta);
+          $runC=pg_query($conn,$consulta);
 
           //CONSULTA DE LA TASA DEL DIA
         
           $tasa="SELECT tasa_dia FROM configuracion where ref=0";
-          $runT=mysqli_query($conn,$tasa);
-          $rowT=mysqli_fetch_assoc($runT);
+          $runT=pg_query($conn,$tasa);
+          $rowT=pg_fetch_assoc($runT);
           $dolar=$rowT['tasa_dia'];   
 
-          while($rowC=mysqli_fetch_assoc($runC)) { 
+          while($rowC=pg_fetch_assoc($runC)) { 
             $campo1=$rowC['id'];
             $campo2=$rowC['co_art'];
             $campo3=$rowC['linea_des'];
@@ -221,7 +221,7 @@ require '../includes/conexion.php';
         <?php
 
     
-/*           while($rowC=mysqli_fetch_assoc($runC)) { 
+/*           while($rowC=pg_fetch_assoc($runC)) { 
             $campo1=$rowC['id'];
             $campo2=$rowC['art_des'];
             $campo3=$rowC['co_art'];

@@ -4,9 +4,9 @@ include '../includes/header.php';
 require '../includes/conexion.php';
 
           $consulta="SELECT * FROM configuracion";
-          $empresa=mysqli_query($conn,$consulta);
+          $empresa=pg_query($conn,$consulta);
 
-              $datos=mysqli_fetch_assoc($empresa);
+              $datos=pg_fetch_assoc($empresa);
               $empresa=$datos['empresa'];
               $rif=$datos['rif'];
               $razon_social=$datos['razon_social'];

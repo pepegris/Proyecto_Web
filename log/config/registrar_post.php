@@ -4,19 +4,16 @@
 include '../includes/loading.php';
 
 if (isset($_POST)) {
-   // require '../includes/log.php';
+    require '../includes/log.php';
     require '../includes/conexion.php';
 
   //  var_dump($_POST);
-/*   $usuario=isset($_POST ['nombre']) ? pg_real_escape_string($conn,trim($_POST ['nombre'])) :false;
-  $email=isset($_POST ['email']) ? pg_real_escape_string($conn,trim($_POST ['email'])) :false;
-  $telefono=isset($_POST ['telefono']) ? pg_real_escape_string($conn,$_POST ['telefono']) : false;
-  $password=isset($_POST ['pass']) ? pg_real_escape_string($conn,trim($_POST ['pass'])) :false;
- */
-$usuario=$_POST ['nombre'];
-$email=$_POST ['email'];
-$telefono=$_POST ['telefono'];
-$password=$_POST ['pass'];
+  $usuario=isset($_POST ['nombre']) ? pg_escape_string($conn,trim($_POST ['nombre'])) :false;
+  $email=isset($_POST ['email']) ? pg_escape_string($conn,trim($_POST ['email'])) :false;
+  $telefono=isset($_POST ['telefono']) ? pg_escape_string($conn,$_POST ['telefono']) : false;
+  $password=isset($_POST ['pass']) ? pg_escape_string($conn,trim($_POST ['pass'])) :false;
+ 
+
         //validar formulario
 
       
