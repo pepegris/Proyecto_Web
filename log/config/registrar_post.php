@@ -38,16 +38,17 @@ $password=$_POST ['pass'];
             
 
          //insertar usuario en la base de datos
-        $sql= "INSERT INTO  usuario VALUES (null,'$usuario','$email','$password_segura','$telefono','null',now())";
+        $sql= "INSERT INTO  usuario (usuario,correo,clave,telefono,auditoria,fecha) VALUES ('$usuario','$email','$password_segura','$telefono','null',now())";
  
         $guardar = pg_query($conn,$sql);
 
         //mostrar error
         if (!$guardar) {
              
-          $error= pg_result_error($conn);
+         // $get1=pg_get_result($conn)
+       //   $error= pg_result_error($conn);
           echo "<br><center><h3>ERROR</h3></center>";
-          echo "<h4>$error</h4>";
+         // echo "<h4>$error</h4>";
            echo "<a href='registrar.php' class='btn btn-danger'>Salir</a>";
           die();
           
