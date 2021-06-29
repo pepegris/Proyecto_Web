@@ -25,13 +25,13 @@ include 'includes/loading.php';
 
     $sql = "SELECT * FROM usuario WHERE usuario ='$usuario'";
 
-$consulta=pg_query($conn,$sql);
+$consulta=mysqli_query($conn,$sql);
 
-if ($consulta && pg_num_rows($consulta)==1) {
+if ($consulta && mysqli_num_rows($consulta)==1) {
 
 
     //esto sacara un array del usuario de la base de dato
-    $cifrado = pg_fetch_assoc($consulta);
+    $cifrado = mysqli_fetch_assoc($consulta);
 
     // comprobar la contraseña
 

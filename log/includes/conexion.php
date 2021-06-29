@@ -1,16 +1,16 @@
 <?php
 
-$servername = "localhost"; // Nombre/IP del servidor
-$database = "sis_control"; // Nombre de la BBDD
-$username = "root"; // Nombre del usuario
-$password = ""; // Contraseña del usuario
-// Creamos la conexión
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn_string = "host=localhost port=5432 dbname=sis_control user=postgres password=753159*";
+$conn = pg_connect($conn_string);
+
 
 // Comprobamos la conexión
 if (!$conn) {
-    die("La conexión ha fallado: " . mysqli_connect_error());
+    die("La conexión ha fallado: " . pg_connect_error());
 }
+
+
+
 
 
 ?>

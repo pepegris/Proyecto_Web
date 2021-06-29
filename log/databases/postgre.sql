@@ -1,0 +1,96 @@
+-- to create a new database
+CREATE DATABASE sis_control;
+
+-- to use database
+use sis_control;
+
+-- creating a new table
+CREATE TABLE art (
+  id  SERIAL PRIMARY KEY,
+  co_art VARCHAR(200) NOT NULL unique,
+  linea_des VARCHAR(200) NOT NULL,
+  ref_art INT NOT NULL,
+  prec_vta1 INT  ,
+  prec_vta2 INT  ,
+  stock INT NOT NULL,
+  stock2 INT ,
+  art_des VARCHAR(255) NOT NULL,
+  img1 varchar (200) not null,
+  img2 varchar (200) ,
+  img3 varchar (200) ,
+  img4 varchar (200) ,
+  auditoria VARCHAR (200) not null,
+  fecha date NOT NULL 
+);
+
+CREATE TABLE linea (
+  id SERIAL PRIMARY KEY,
+  linea_des VARCHAR(200) NOT NULL unique,
+  fecha date NOT NULL 
+
+);
+
+CREATE TABLE configuracion (
+  ref INT UNIQUE,
+  empresa VARCHAR(200) ,
+  rif varchar (200) ,
+  razon_social varchar(240) ,
+  numero varchar (200) ,
+  direcion varchar(240) ,
+  iva int not null,
+  tasa_dia INT NOT NULL
+);
+
+
+INSERT INTO  configuracion VALUES (0,'NOMBRE DE LA EMRPESA','j-99999-1','trabajo','+58 0412-2027622','Venezuela',16,3000000);
+
+CREATE TABLE clientes (
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR (255) NOT NULL,
+  ci varchar (200) NOT NULL,
+  numero varchar (200),
+  email VARCHAR (255),
+  direccion VARCHAR (255),
+  informe VARCHAR (255),
+  deuda VARCHAR (255),
+  auditoria VARCHAR (200) not null,
+  fecha date NOT NULL 
+);
+
+
+
+
+
+create table usuario(  
+  id SERIAL PRIMARY KEY,
+  usuario VARCHAR(150) UNIQUE NOT NULL,
+  correo varchar (200) not null,
+  clave VARCHAR(200) NOT NULL,
+  telefono VARCHAR(150),
+  auditoria VARCHAR (200) not null,
+  fecha date NOT NULL DEFAULT CURRENT_TIMESTAMP
+  );
+
+/*   INSERT INTO  usuario VALUES (null,'admin','correo@gmail.com','admin1','5763421','auditor',now()); */
+
+
+  -- FACTURA
+/* CREATE TABLE facturas(
+  id SERIAL PRIMARY KEY,
+  fac_des VARCHAR(255) NOT NULL,
+  total_bruto INT NOT NULL,
+  total_neto INT NOT NULL,
+  total_iva INT NOT NULL,
+  fecha date NOT NULL 
+);
+
+CREATE TABLE reng_fact(
+  id SERIAL PRIMARY KEY,
+  reng_art VARCHAR(255) NOT NULL,
+  precio_art INT NOT NULL,
+  fecha date NOT NULL DEFAULT CURRENT_TIMESTAMP,
+   FOREIGN KEY(id) REFERENCES facturas(id)
+)
+ */
+
+
