@@ -45,7 +45,7 @@ $password=$_POST ['pass'];
         //mostrar error
         if (!$guardar) {
              
-          $error= pg_error($conn);
+          $error= pg_result_error($conn);
           echo "<br><center><h3>ERROR</h3></center>";
           echo "<h4>$error</h4>";
            echo "<a href='registrar.php' class='btn btn-danger'>Salir</a>";
