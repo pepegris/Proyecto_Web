@@ -35,7 +35,7 @@ if (isset($_POST)) {
             
 
          //insertar usuario en la base de datos
-        $sql= "INSERT INTO  usuario (usuario,correo,clave,telefono,auditoria,fecha) VALUES ('$usuario','$email','$password_segura','$telefono','$cuenta_on',now())";
+        $sql= "INSERT INTO  usuario (usuario,correo,clave,telefono,auditoria,fecha) VALUES ('$usuario','$email','$password_segura','$telefono','$cuenta_on',n1ow())";
  
         $guardar = pg_query($conn,$sql);
 
@@ -43,10 +43,11 @@ if (isset($_POST)) {
         if (!$guardar) {
              
          
-          $res_error=pg_get_result($conn);
+          $error=pg_last_error($conn);
           echo "<br><center><h3>ERROR</h3></center>";
+          echo "<h4>$error</h4>";
           echo "<a href='registrar.php' class='btn btn-danger'>Salir</a>";
-          echo pg_result_error($res_error);
+          
           die();
           
            
