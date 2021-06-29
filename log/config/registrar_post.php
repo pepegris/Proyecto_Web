@@ -35,7 +35,7 @@ if (isset($_POST)) {
             
 
          //insertar usuario en la base de datos
-        $sql= "INSERT INTO  usuario (usuario,correo,clave,telefono,auditoria,fecha) VALUES ('$usuario','$email','$password_segura','$telefono','$cuenta_on',n1ow())";
+        $sql= "INSERT INTO  usuario (usuario,correo,clave,telefono,auditoria,fecha) VALUES ('$usuario','$email','$password_segura','$telefono','$cuenta_on',now())";
  
         $guardar = pg_query($conn,$sql);
 
