@@ -71,7 +71,7 @@ create table usuario(
   fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
   );
 
-  INSERT INTO  usuario VALUES (null,'admin','correo@gmail.com','admin1','5763421','auditor',now());
+/*   INSERT INTO  usuario VALUES (null,'admin','correo@gmail.com','admin1','5763421','auditor',now()); */
 
 
   -- FACTURA

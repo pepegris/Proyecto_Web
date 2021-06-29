@@ -89,7 +89,7 @@ session_destroy();
     
     
 
-    <script src="../assets/css/materialize/js/materialize.min.js"></script>
+    <script src="assets/css/materialize/js/materialize.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
   </body>

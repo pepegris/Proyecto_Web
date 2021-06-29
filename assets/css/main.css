@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic);
 /*
+
+color: colorverde#.72C05B;
 Template Name: Color
 Version: 1.2
 Author: ThemeintheBox
@@ -32,7 +34,7 @@ p {
     font-weight: 300;
 }
 a {
-  color: #72C05B;
+  color: #5bacc0;
   -webkit-transition: color 400ms, background-color 400ms;
   -moz-transition: color 400ms, background-color 400ms;
   -o-transition: color 400ms, background-color 400ms;
@@ -41,7 +43,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #72C05B;
+  color: #5bacc0;
 }
 hr {
   border-top: 1px solid #e5e5e5;
@@ -90,12 +92,12 @@ hr {
   border-radius: 0px;
 }
 .btn.btn-primary {
-  background: #72C05B;
-  border-color: #72C05B;
+  background: #5bacc0;
+  border-color: #5bacc0;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus {
-  background: #72C05B;
+  background: #5bacc0;
 }
 .column-title {
   margin-top: 0;
@@ -110,7 +112,7 @@ hr {
   bottom: -1px;
   left: 0;
   width: 40%;
-  border-bottom: 1px solid #72C05B;
+  border-bottom: 1px solid #5bacc0;
 }
 ul.nostyle {
   list-style: none;
@@ -118,7 +120,7 @@ ul.nostyle {
   margin-bottom: 20px;
 }
 ul.nostyle i {
-  color: #72C05B;
+  color: #5bacc0;
 }
 .scaleIn {
   -webkit-animation-name: scaleIn;
@@ -214,12 +216,12 @@ ul.nostyle i {
   #main-menu.navbar-default .dropdown-menu > li.active,
   #main-menu.navbar-default .dropdown-menu > li.open,
   #main-menu.navbar-default .dropdown-menu > li:hover {
-    border-left-color: #72C05B;
+    border-left-color: #5bacc0;
   }
   #main-menu.navbar-default .dropdown-menu > li.active > a,
   #main-menu.navbar-default .dropdown-menu > li.open > a,
   #main-menu.navbar-default .dropdown-menu > li:hover > a {
-    color: #72C05B;
+    color: #5bacc0;
     background-color: transparent;
   }
 }
@@ -248,7 +250,7 @@ ul.nostyle i {
   color: #fff;
 }
 #main-slider .slider-inner h2 > span {
-  color: #72C05B;
+  color: #5bacc0;
 }
 #main-slider .slider-inner .btn {
   margin-top: 10px;
@@ -272,7 +274,7 @@ ul.nostyle i {
 }
 #main-slider .owl-prev:hover,
 #main-slider .owl-next:hover {
-  background-color: #72C05B;
+  background-color: #5bacc0;
 }
 #main-slider .owl-prev {
   left: -35px;
@@ -286,7 +288,7 @@ ul.nostyle i {
   width: 0%;
   max-width: 100%;
   height: 4px;
-  background: #72C05B;
+  background: #5bacc0;
 }
 #progressBar {
   margin-top: -4px;
@@ -320,7 +322,7 @@ ul.nostyle i {
   line-height: 1;
 }
 #cta2 h2 > span {
-  color: #72C05B;
+  color: #5bacc0;
 }
 #cta2 p {
     color: #fff;
@@ -352,7 +354,7 @@ ul.nostyle i {
   text-align: center;
 }
 #services .features-item:hover .features-icon i , #services .features-item:hover h3 {
-  color: #72C05B ;
+  color: #5bacc0 ;
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
@@ -379,7 +381,7 @@ ul.nostyle i {
   line-height: 64px;
   text-align: center;
   width: 64px;
-  color: #72C05B;
+  color: #5bacc0;
   box-shadow: inset 0 0 0 1px #d7d7d7;
   -webkit-box-shadow: inset 0 0 0 1px #d7d7d7;
   transition: background-color 400ms, background-color 400ms;
@@ -420,7 +422,7 @@ ul.nostyle i {
 }
 #portfolio .portfolio-filter > li a:hover,
 #portfolio .portfolio-filter > li a.active {
-  background: #72C05B;
+  background: #5bacc0;
   color: #fff;
 }
 
@@ -653,7 +655,7 @@ ul.nostyle i {
   color: #fff;
 }
 #footer a:hover {
-  color: #72C05B;
+  color: #5bacc0;
 }
 #footer ul {
   list-style: none;
@@ -692,7 +694,7 @@ ul.nostyle i {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #72C05B;
+  background: #5bacc0;
   color: #fff;
 }
 
