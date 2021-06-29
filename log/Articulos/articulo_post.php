@@ -53,7 +53,7 @@ if (isset($_FILES) && isset($_POST)) {
 
                             //mandando mensaje de error de la base de datos
                             
-                            $error= pg_error($conn);
+                            $error=pg_last_error($conn);
                             echo "<br><center><h3>ERROR</h3></center>";
                             echo "<h4>$error</h4>";
                     
@@ -76,7 +76,7 @@ if (isset($_FILES) && isset($_POST)) {
                 
                                 
                             echo "<a href='articulos.php' class='btn btn-danger'>Salir</a>";
-                            die("La conexión ha fallado: " . pg_connect_error());
+                            die("La conexión ha fallado: " . pg_connection_status($conn));
             }
 
 

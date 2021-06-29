@@ -6,7 +6,7 @@ $conn = pg_connect($conn_string);
 
 // Comprobamos la conexión
 if (!$conn) {
-    die("La conexión ha fallado: " . pg_connect_error());
+    die("La conexión ha fallado: " . pg_connection_status($conn));
 }
 
 

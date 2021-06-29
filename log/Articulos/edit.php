@@ -12,9 +12,9 @@ $mensaje_error2='';
 if  (isset($_GET['id'])) {
   $id = $_GET['id'];
   $query = "SELECT * FROM art WHERE id=$id";
-  $result = mysqli_query($conn, $query);
-  if (mysqli_num_rows($result) == 1) {
-    $row = mysqli_fetch_array($result);
+  $result = pg_query($conn, $query);
+  if (pg_num_rows($result) == 1) {
+    $row = pg_fetch_array($result);
     $art_des=$row['art_des']; 
     $co_art=$row['co_art']; 
     $ref_art=$row['ref_art'];
@@ -59,12 +59,12 @@ if (isset($_POST['update'])) {
    }else {
      echo"<center><h3>Por favor suba una imagen valida /JPG/JPEG/PNG/GIF: </h3> <p>$tipo_imagen</p>";
      echo "<a href='articulos.php' class='btn btn-danger'>Salir</a></center>";
-     mysqli_close($conn);
+     pg_lo_close($conn);
                      exit;
  }
     
   }
-  mysqli_query($conn, $query);
+  pg_query($conn, $query);
   $_SESSION['message'] = 'Edit Updated Successfully';
   $_SESSION['message_type'] = 'warning *EDITANDO*';
   header('Location: articulos.php');
@@ -92,9 +92,9 @@ if (isset($_POST['update'])) {
                 <?php 
                 
                 $sql_linea="SELECT linea_des FROM linea";
-                $consulta_linea=mysqli_query($conn,$sql_linea);
+                $consulta_linea=pg_query($conn,$sql_linea);
                 
-                while ( $res_linea=mysqli_fetch_array($consulta_linea) ) {
+                while ( $res_linea=pg_fetch_array($consulta_linea) ) {
 
                   $linea=$res_linea['linea_des'];
           

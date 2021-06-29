@@ -8,8 +8,8 @@ require 'conexion.php';
 		
 			
 			$consulta = "SELECT * FROM facturas ";
-			$buscar = mysqli_query($conn,$consulta);
-			$datos=mysqli_fetch_assoc($buscar);
+			$buscar = pg_query($conn,$consulta);
+			$datos=pg_fetch_assoc($buscar);
 
 			$id=$datos['id'];
 			$nombre=$datos['nombre'];

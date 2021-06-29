@@ -20,7 +20,7 @@ if (isset($_POST)) {
 
         if (!$guardar) {
            
-           $error= pg_error($conn);
+          $error=pg_last_error($conn);
            echo "<br><center><h3>ERROR</h3></center>";
            echo "<h4>$error</h4>";
             echo "<a href='inicio.php' class='btn btn-danger'>Salir</a>";
