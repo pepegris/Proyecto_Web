@@ -4,15 +4,19 @@
 include '../includes/loading.php';
 
 if (isset($_POST)) {
-    require '../includes/log.php';
+   // require '../includes/log.php';
     require '../includes/conexion.php';
 
   //  var_dump($_POST);
-  $usuario=isset($_POST ['nombre']) ? mysqli_real_escape_string($conn,trim($_POST ['nombre'])) :false;
-  $email=isset($_POST ['email']) ? mysqli_real_escape_string($conn,trim($_POST ['email'])) :false;
-  $telefono=isset($_POST ['telefono']) ? mysqli_real_escape_string($conn,$_POST ['telefono']) : false;
-  $password=isset($_POST ['pass']) ? mysqli_real_escape_string($conn,trim($_POST ['pass'])) :false;
-
+/*   $usuario=isset($_POST ['nombre']) ? pg_real_escape_string($conn,trim($_POST ['nombre'])) :false;
+  $email=isset($_POST ['email']) ? pg_real_escape_string($conn,trim($_POST ['email'])) :false;
+  $telefono=isset($_POST ['telefono']) ? pg_real_escape_string($conn,$_POST ['telefono']) : false;
+  $password=isset($_POST ['pass']) ? pg_real_escape_string($conn,trim($_POST ['pass'])) :false;
+ */
+$usuario=$_POST ['nombre'];
+$email=$_POST ['email'];
+$telefono=$_POST ['telefono'];
+$password=$_POST ['pass'];
         //validar formulario
 
       
@@ -34,14 +38,14 @@ if (isset($_POST)) {
             
 
          //insertar usuario en la base de datos
-        $sql= "INSERT INTO  usuario VALUES (null,'$usuario','$email','$password_segura','$telefono','$cuenta_on',now())";
+        $sql= "INSERT INTO  usuario VALUES (null,'$usuario','$email','$password_segura','$telefono','null',now())";
  
-        $guardar = mysqli_query($conn,$sql);
+        $guardar = pg_query($conn,$sql);
 
         //mostrar error
         if (!$guardar) {
              
-          $error= mysqli_error($conn);
+          $error= pg_error($conn);
           echo "<br><center><h3>ERROR</h3></center>";
           echo "<h4>$error</h4>";
            echo "<a href='registrar.php' class='btn btn-danger'>Salir</a>";
