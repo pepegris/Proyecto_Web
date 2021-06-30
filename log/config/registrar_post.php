@@ -4,7 +4,7 @@
 include '../includes/loading.php';
 
 if (isset($_POST)) {
-    require '../includes/log.php';
+   // require '../includes/log.php';
     require '../includes/conexion.php';
 
   //  var_dump($_POST);
