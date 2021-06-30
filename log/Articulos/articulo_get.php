@@ -2,7 +2,7 @@
 
 if (isset($_POST)) {
     
-    var_dump($_POST);
+    
     $co_art=$_POST['co_art'];
     $linea_des=$_POST['linea_des'];
 ?>
@@ -24,6 +24,9 @@ if (isset($_POST)) {
         
         
     }
+    td{
+      color:black;
+    }
     
    
 </style>
@@ -36,7 +39,8 @@ require_once '../includes/menu.php';
 
 ?>
 <body>
- 
+<br><br>
+      <center><h2>Resultado</h2></center>
   <table class="table table-bordered table-hover" id="tblData" >
         <thead style="background-color: black;">
           <tr class="table-secondary">
@@ -79,9 +83,9 @@ require_once '../includes/menu.php';
               
             }
  
-            $buscar = mysqli_query($conn,$sql);
+            $buscar = pg_query($conn,$sql);
 
-          while($rowC=mysqli_fetch_array($buscar)) { 
+          while($rowC=pg_fetch_array($buscar)) { 
               
             $campo1=$rowC['id'];
             $campo2=$rowC['co_art'];
@@ -94,7 +98,7 @@ require_once '../includes/menu.php';
             <td><?php echo $campo1; ?></td>
             <td><?php echo $campo2; ?></td>
             <td><?php echo $campo3; ?></td>
-            <td><?php echo $campo4; ?></td>
+            <td><?php echo $campo4; ?>$</td>
             <td><?php echo $campo5; ?></td>
             <td><?php echo $campo6; ?></td>
             <td>

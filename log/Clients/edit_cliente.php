@@ -15,9 +15,9 @@ require '../includes/conexion.php';
 if  (isset($_GET['id'])) {
   $id = $_GET['id'];
   $query = "SELECT * FROM clientes WHERE id=$id";
-  $result = mysqli_query($conn, $query);
-  if (mysqli_num_rows($result) == 1) {
-    $row = mysqli_fetch_array($result);
+  $result = pg_query($conn, $query);
+  if (pg_num_rows($result) == 1) {
+    $row = pg_fetch_array($result);
     
     $nombre=$row['nombre'];
     $ci=$row['ci'];
@@ -47,7 +47,7 @@ if (isset($_POST['update'])) {
 
 
   $query = "UPDATE clientes set nombre = '$nombre', ci = '$ci', numero = '$numero', email = '$email',direccion = '$direccion',informe = '$informe',deuda = '$deuda'  WHERE id=$id";
-  mysqli_query($conn, $query);
+  pg_query($conn, $query);
   $_SESSION['message'] = 'Edit Updated Successfully';
   $_SESSION['message_type'] = 'warning *EDITANDO*';
   header('Location: clientes_registrados.php');

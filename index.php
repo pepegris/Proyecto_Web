@@ -184,7 +184,7 @@
             <div class="text-center">
                 <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">Nuestros <span>Productos</span></h2>
                 <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Mauris pretium auctor quam. Vestibulum et nunc id nisi fringilla <br />iaculis. Mauris pretium auctor quam.</p>
-                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Consiguelo Ahora</a></p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="productos.php">Consiguelo Ahora</a></p>
             </div>
         </div>
     </section>

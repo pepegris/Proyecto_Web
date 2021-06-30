@@ -46,6 +46,15 @@ require_once '../includes/menu.php';
 
 ?>
 <body>
+
+
+
+
+
+
+
+
+
  
 <div id="body">
 <form action="registrar_post.php" method="POST" >

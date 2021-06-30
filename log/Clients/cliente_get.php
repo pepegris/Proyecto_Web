@@ -1,174 +1,125 @@
-<?php
-
- 
-
-require '../includes/log.php';
+<?php require '../includes/log.php';
 
 
 
+
+
+if (isset($_POST)) {
+	
+require '../includes/conexion.php';
+require '../includes/empresa.php';
+$nombre=$_POST['nombre'];
+
+if ($conn) {
+	
+	$consulta = "SELECT * FROM clientes WHERE nombre LIKE '%$nombre%'";
+	$buscar = pg_query($conn,$consulta);
+	$datos=pg_fetch_assoc($buscar);
 
 	
-	if (isset($_POST)) {
-		
-		require '../includes/conexion.php';
-		require '../includes/empresa.php';
-		$nombre=$_POST['nombre'];
+	$id=$datos['id'];
+	$nombre=$datos['nombre'];
+		$m_nombre = ucwords($nombre);
+	$ci=$datos['ci'];
+	$numero=$datos['numero'];
+	$email=$datos['email'];    
+	$direccion=$datos['direccion'];   
+	$informe=$datos['informe'];  
+	$deuda=$datos['deuda'];  
+// $fecha=$datos['fecha']; 
 
-		if ($conn) {
-			
-			$consulta = "SELECT * FROM clientes WHERE nombre LIKE '%$nombre%'";
-			$buscar = mysqli_query($conn,$consulta);
-			$datos=mysqli_fetch_assoc($buscar);
+}
 
-			$id=$datos['id'];
-			$nombre=$datos['nombre'];
-			$ci=$datos['ci'];
-			$numero=$datos['numero'];
-			$email=$datos['email'];    
-			$direccion=$datos['direccion'];   
-			$informe=$datos['informe'];  
-			$deuda=$datos['deuda'];  
-		// $fecha=$datos['fecha']; 
 
-		}
 
-	
-	}
-		else{
-			header('url= clientes_registrados.php');
-			exit;
-		}
-	
+
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Pedido</title>
-	<link href="css/factura/bootstrap.css" rel="stylesheet" />
-	<style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
-  			body, h1, h2, h3, h4, h5, h6{
-    			font-family: 'Bree Serif', serif;
- 	 									}
-	 @media (max-width: 900px){
-    #panel input{
-        width: 105px;
-        height: 30px;
-    }
-	#factura input{
-        width: 150px;
-        height: 30px;
-    }
-	#imagen {
-		height: 200px;
-		
-	}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/fondo.css">
     
-}	
-  	</style>
-		<div class="container">
-			<div class="row">
-            
-		<div class="col-xs-1">
-			<h6><img id="imagen" alt="" style="height: 200px; width:200px"  src="img/logo.jpeg" /> 
-			</h6>
-			
-		</div>
-		<div class="col-xs-5">
-			<!-- <h5><a href=" "><img alt="" /> <p>[NOMBRE]</p>
-				<p>[COMPAÑIA]</p>
-				<p>[DIRECCI&Oacute;N]</p>
-				<p>[CIUDAD, COD POSTAL]</p>
-				<p>[TELEF&Oacute;NO]</p> </a>
-			</h5> -->
-			
-		</div>
-		<div class="col-xs-6 text-right">
-							<div class="panel panel-default">
-							<div class="panel-heading">
-									<h1>DATOS DEL CLIENTE
-										<a href="#"></a>
-									</h1>
-									
-							</div>
-							
-						</div>
-					</div>
- 
-			<hr />
- 
-			
-	
-			
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4> <?php echo "Caracas " . date("d") . " del " . date("m") . " de " . date("Y"); ?> 
-									
-									</h4>
-								</div>
-						
-						</div>
-					</div>
-					
-				</div>
-
-<pre></pre>
-<table class="table table-bordered">
-	<thead >
-		<tr >
-			<th style="text-align: center;">
-				<h4>Datos</h4>
-			</th>
-		
-			
-			
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td rowspan="3" style="text-align: center;">
-				<p> Nombre:  <?php echo "$nombre"; ?></p>
-				<p> CI:  <?php echo "$ci"; ?></p>
-				<p>Email:  <?php echo "$email"; ?></p>
-				<p>Direccion:  <?php echo "$ci"; ?></p>
-				<p> Informe:  <?php echo "$informe"; ?></p>
-				<p>Deuda: <?php echo "$deuda"; ?></p>
-				
-				
-			</td>
-
-		
-			
-			
-		</tr>
-		
-		
-		
-	</tbody>
-</table>
-<pre></pre>
-
-<pre></pre>
-		
-
-	<div class="row">
-			<div class="col-xs-4">
-				<h1><a href=" "><img alt="" src="img/qr.png" /></a></h1>
-			</div>
-		
-	</div>
-		
-</div>
-</div>
-
+    <title>Registrar</title>
 </head>
+<style>
+
+#body{
+    height: 100vh;
+  
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+form{
+  border-radius: 10px;  
+  background-color:  rgba(29, 27, 27, 0.205);
+  box-shadow: 2px 2px 5px #999;
+  width: 42%;
+}
+form .fieldset{
+  margin-left: 35px;
+}
+form .fieldset .form-group input{
+  width: 60%;
+}
+form .fieldset .form-group span{
+  color: red;
+}
+    
+</style>
+<?php
+
+
+require_once '../includes/header.php';
+require_once '../includes/menu.php';
+
+?>
 <body>
-	<center><input type="button" name="imprimir" value="Imprimir" class="btn btn-success" onclick="window.print();"> </center>
-	<br>
+
+
+<!-- $nombre=$datos['nombre'];
+	$ci=$datos['ci'];
+	$numero=$datos['numero'];
+	$email=$datos['email'];    
+	$direccion=$datos['direccion'];   
+	$informe=$datos['informe'];  
+	$deuda=$datos['deuda'];  
+ -->
+ 
+<div id="body">
+
+	<div class="card text-white bg-primary" style="max-width: 20rem;">
 	
-	
+	<center><div class="card-header"><h3><?=$m_nombre?></h3></div></center>
+	<div class="card-body">
+		<center><h5 class="card-title">Informacion</h5></center>
+		
+		<p>CI/RIF: <?=$ci?><hr>
+		Tlf: <?=$numero?><hr>
+		email: <?=$email?><hr>
+		Tlf: <?=$direccion?><hr></p>
+
+		<p class="card-text"><?=$informe?></p>
+	</div>
+
+</div>
+<?php } ?>
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+

@@ -13,12 +13,16 @@ if (isset($_FILES) && isset($_POST)) {
     $tipo_imagen   = $_FILES['imagen']['type'];
     $tam_imagen    = $_FILES['imagen']['size'];
 
+    
 
     $art_des=isset($_POST ['art_des']) ? pg_escape_string($conn,$_POST['art_des']):false ;
-    $co_art=isset ($_POST ['co_art']) ? pg_escape_string($conn,$_POST ['co_art'] ): false ;
+    $co_art_1=isset ($_POST ['co_art']) ? pg_escape_string($conn,$_POST ['co_art'] ): false ;
     $ref_art=isset($_POST ['ref_art']) ? pg_escape_string($conn,trim($_POST ['ref_art'])) : false;
     $stock=isset($_POST ['stock']) ? pg_escape_string($conn,trim($_POST ['stock'])) :false;
     $linea_des=isset($_POST ['linea_des']) ? pg_escape_string($conn,$_POST['linea_des']):false ;
+
+    //PONE EN MINUSCULA
+    $co_art=mb_strtolower($co_art_1);
 
     if ($tam_imagen <= 10000000) {
 

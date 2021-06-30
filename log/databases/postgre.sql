@@ -20,13 +20,13 @@ CREATE TABLE art (
   img3 varchar (200) ,
   img4 varchar (200) ,
   auditoria VARCHAR (200) not null,
-  fecha date NOT NULL 
+  fecha date NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE linea (
   id SERIAL PRIMARY KEY,
   linea_des VARCHAR(200) NOT NULL unique,
-  fecha date NOT NULL 
+  fecha date NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 );
 
@@ -54,7 +54,7 @@ CREATE TABLE clientes (
   informe VARCHAR (255),
   deuda VARCHAR (255),
   auditoria VARCHAR (200) not null,
-  fecha date NOT NULL 
+  fecha date NOT NULL DEFAULT CURRENT_TIMESTAMP 
 );
 
 

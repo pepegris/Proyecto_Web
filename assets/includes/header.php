@@ -44,7 +44,7 @@
                     <div >
                         <ul  class="nav navbar-nav">
                             <li ><a href="index.php" ><i class="fa fa-home" ></i>Home</a></li>
-                            <li ><a href="#about" >Productos</a></li>
+                            <li ><a href="productos.php" >Productos</a></li>
                             <li ><a href="sobre_nosotros.php" >Sobre Nosotros</a></li>
                             <li ><a href="contactanos.php" >Contactanos</a></li>
                             <li ><a href="log/index.php" style="font-size: 21px ;"><i class="fa fa-users"></i></a></li>

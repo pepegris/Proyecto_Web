@@ -193,6 +193,7 @@ require '../includes/conexion.php';
           while($rowC=pg_fetch_assoc($runC)) { 
             $campo1=$rowC['id'];
             $campo2=$rowC['co_art'];
+                $m_campo2 = ucwords($campo2); 
             $campo3=$rowC['linea_des'];
             $campo4=$rowC['ref_art'];
                 $total=$campo4*$dolar;
@@ -201,7 +202,7 @@ require '../includes/conexion.php';
             ?>
           <tr>
            
-            <td><?php echo $campo2; ?></td>
+            <td><?php echo $m_campo2; ?></td>
             <td><?php echo $campo3; ?></td>
             <td>Bs.<?php echo $bolivares; ?></td>
             <td><?php echo $campo4; ?></td>

@@ -116,10 +116,10 @@ require_once '../includes/menu.php';
 
           //CONSULTA DE CLIENTES
           $consulta="SELECT * FROM clientes";
-          $runC=mysqli_query($conn,$consulta);
+          $runC=pg_query($conn,$consulta);
    
 
-          while($rowC=mysqli_fetch_assoc($runC)) { 
+          while($rowC=pg_fetch_assoc($runC)) { 
             $campo1=$rowC['id'];
             $campo2=$rowC['nombre'];
             $campo3=$rowC['ci'];

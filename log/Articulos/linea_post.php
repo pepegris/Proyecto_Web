@@ -21,7 +21,7 @@ if (isset($_POST)) {
 
         if (!$guardar) {
            
-           $error= pg_error($conn);
+            $error=pg_last_error($conn);
            echo "<center><h3>ERROR</h3>";
            echo "<h4>$error</h4>";
 

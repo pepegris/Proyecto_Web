@@ -1,11 +1,17 @@
-  <!-- PORTAFOLIO -->
+<!-- PORTAFOLIO -->
 
-  <section id="portfolio">
+<section id="portfolio">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title text-center wow fadeInDown">Portafolio</h2>
-            <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-        </div>
+            <h2 class="section-title text-center wow fadeInDown">Portafolio / Shop</h2>
+            
+             <form action="res-productos.php" method="post">
+             <h3 class="text-center wow fadeInDown">Buscar: <input type="search" class="text-center wow fadeInDown"  name="buscar" id=""></h3>
+             </form> 
+            
+       </div>
+
+
 
         <div class="text-center">
 
