@@ -76,7 +76,7 @@
 
 
 <!-- SERVICIOS -->
-<section id="services" >
+<!-- <section id="services" >
         <div class="container">
 
             <div class="section-header">
@@ -167,9 +167,9 @@
                     </div>
 
                 </div>
-            </div><!--/.row-->    
-        </div><!--/.container-->
-    </section><!--/#services-->
+            </div> 
+        </div>
+    </section> -->
 
 <!-- 
 <section id="features">

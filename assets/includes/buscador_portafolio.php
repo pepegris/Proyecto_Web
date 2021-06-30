@@ -53,7 +53,7 @@
 
         <?php
         
-        $sql_art = "SELECT * FROM art ";
+        $sql_art = "SELECT * FROM art ORDER BY fecha DESC  ";
         $consulta_art = pg_query($conn,$sql_art);
 
         while ($res=pg_fetch_array($consulta_art)) {

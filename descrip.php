@@ -72,10 +72,20 @@ if  (isset($_GET['id'])) {
             </div>
         </div>
     </section>
-
-
     
+   
+
+    <!-- DESCRIPCION DEL ARTICULO -->
 <section id="features">
+<div class="container">
+    <!-- BUSCADOR -->
+        <!-- <div class="section-header">
+            
+             <form action="res-productos.php" method="post">
+             <h3 class="text-center wow fadeInDown">Buscar: <input type="search" class="text-center wow fadeInDown"  name="buscar" id=""></h3>
+             </form> 
+            
+       </div> -->
     <div class="container">
         <div class="section-header">
             <h2 class="section-title text-center wow fadeInDown"><?=$articulo?></h2>
@@ -134,6 +144,70 @@ if  (isset($_GET['id'])) {
 </section>
 <!-- SOBRE NOSOTROS -->
 
+
+
+
+<!-- PORTAFOLIO -->
+
+<section id="portfolio">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Recomendaciones</h2>
+            
+             
+            
+       </div>
+
+
+
+    
+
+
+<!-- portafolio -->
+        <div class='portfolio-items'>
+
+        <?php
+        
+        $sql_art = "SELECT * FROM art where linea_des='$linea_des' AND id != $id ORDER BY fecha DESC LIMIT 3 ";
+        $consulta_art = pg_query($conn,$sql_art);
+
+        while ($res=pg_fetch_array($consulta_art)) {
+
+                $id=$res['id'];
+                $co_art=$res['co_art'];
+                    $articulo=ucwords($co_art);
+                $linea_des=$res['linea_des'];
+                $ref_art=$res['ref_art'];
+                $art_des=$res['art_des'];
+                $img1=$res['img1'];
+
+                if ($linea_des=='Punto de Venta') {
+                    $linea_des='punto';
+                }
+
+            ?>
+       
+
+            <div class="portfolio-item <?=$linea_des?>">
+                <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="log/uploads/img/<?=$img1?>" alt="">
+                    <div class="portfolio-info">
+                        <h3><?=$articulo?></h3>
+                        
+                        <a style="font-size: 35px ;" href='descrip.php?id=<?php echo $id?>'> <i class="fa fa-eye"></i>  </a>
+                        <a class="preview" href="log/uploads/img/<?=$img1?>" rel="prettyPhoto">
+                            <img src="assets/images/portfolio/expand.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div><!--/.portfolio-item-->
+
+
+            <?php     }  ?>
+
+        </div>
+    </div><!--/.container-->
+</section><!--/#portfolio-->
 
   
   

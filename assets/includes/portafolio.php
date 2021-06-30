@@ -47,7 +47,7 @@
 
         <?php
         
-        $sql_art = "SELECT * FROM art ";
+        $sql_art = "SELECT * FROM art ORDER BY fecha DESC LIMIT 9  ";
         $consulta_art = pg_query($conn,$sql_art);
 
         while ($res=pg_fetch_array($consulta_art)) {
