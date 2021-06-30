@@ -36,7 +36,7 @@
                     <!-- logo -->
                     <div class="navbar-brand">
                         <a href="index.php" >
-                            <img src="assets/images/logo.png" alt="">
+                            <img src="assets/images/logo.png" alt="" style="height:50px;">
                         </a>
                     </div>
                     <!-- /logo -->

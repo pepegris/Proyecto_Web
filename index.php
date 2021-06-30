@@ -77,9 +77,9 @@
     <section id="cta2">
         <div class="container">
             <div class="text-center">
-                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">la esquina criolla <span>WELCOME</span></h2>
-                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">NECESITO MONEY<br />Prueba prueba</p>
-                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Get It Now</a></p>
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">Soluciones <span>Sefica</span> C.A</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Pagina en Proceso<br />Prueba prueba</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Bienvenido</a></p>
             </div>
         </div>
     </section>
