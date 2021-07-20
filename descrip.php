@@ -12,11 +12,12 @@ $mensaje_error2='';
 if  (isset($_GET['id'])) {
   $id = $_GET['id'];
   
-  //calculando la tasa
+//calculando la tasa
     $tasa="SELECT tasa_dia FROM configuracion where ref=0";
     $runT=pg_query($conn,$tasa);
     $rowT=pg_fetch_assoc($runT);
     $dolar=$rowT['tasa_dia'];   
+//calculando la tasa
   
   $query = "SELECT * FROM art WHERE id=$id";
   $result = pg_query($conn, $query);
