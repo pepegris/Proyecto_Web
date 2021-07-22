@@ -87,7 +87,6 @@ create table factura(
 
 create table reng_fact (
 
-    ID  SERIAL PRIMARY KEY,
     ID_FACTURA int PRIMARY KEY not null,
     art VARCHAR (90) not null,
     cantidad int not null,
