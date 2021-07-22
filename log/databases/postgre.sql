@@ -1,10 +1,4 @@
--- to create a new database
-CREATE DATABASE sis_control;
 
--- to use database
-use sis_control;
-
--- creating a new table
 CREATE TABLE art (
   id  SERIAL PRIMARY KEY,
   co_art VARCHAR(200) NOT NULL unique,
@@ -42,7 +36,7 @@ CREATE TABLE configuracion (
 );
 
 
-INSERT INTO  configuracion VALUES (0,'NOMBRE DE LA EMRPESA','j-99999-1','trabajo','+58 0412-2027622','Venezuela',16,3000000);
+INSERT INTO  configuracion VALUES (0,'NOMBRE DE LA EMRPESA','j-99999-1','trabajo','+58 0412-2027622','Venezuela',16,3800000);
 
 CREATE TABLE clientes (
   id SERIAL PRIMARY KEY,
@@ -74,23 +68,40 @@ create table usuario(
 /*   INSERT INTO  usuario VALUES (null,'admin','correo@gmail.com','admin1','5763421','auditor',now()); */
 
 
-  -- FACTURA
-/* CREATE TABLE facturas(
-  id SERIAL PRIMARY KEY,
-  fac_des VARCHAR(255) NOT NULL,
-  total_bruto INT NOT NULL,
-  total_neto INT NOT NULL,
-  total_iva INT NOT NULL,
-  fecha date NOT NULL 
+create table factura(
+
+    ID  SERIAL PRIMARY KEY,
+    descripcion varchar(35),
+    cliente VARCHAR (90),
+    precio FLOAT not null,
+    cantidad int not null,
+    iva int not null,
+    fecha date NOT NULL DEFAULT CURRENT_TIMESTAMP
+
+    
+
+
+
 );
 
-CREATE TABLE reng_fact(
-  id SERIAL PRIMARY KEY,
-  reng_art VARCHAR(255) NOT NULL,
-  precio_art INT NOT NULL,
-  fecha date NOT NULL DEFAULT CURRENT_TIMESTAMP,
-   FOREIGN KEY(id) REFERENCES facturas(id)
-)
- */
+
+create table reng_fact (
+
+    ID  SERIAL PRIMARY KEY,
+    ID_FACTURA int PRIMARY KEY not null,
+    art VARCHAR (90) not null,
+    cantidad int not null,
+    precio int,
+    ref int,
+    iva int not null,
+    fecha date NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    
+
+    CONSTRAINT fk_reng_fact FOREIGN KEY(ID_FACTURA) REFERENCES factura(ID)
+
+
+
+);
+
 
 

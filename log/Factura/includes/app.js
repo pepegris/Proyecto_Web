@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
     $('#task-result').hide()
+    /* renglonFactura(); */
 
+    /* recibiendo informacion de busqueda */
     $('#search').keyup(function (e) {
         
         let search_art = $('#search').val()
@@ -48,13 +50,6 @@ $(document).ready(function () {
 
                $('#container').html(template)
 
-              
-
-               
-
-                
-                   
-               
 
 
                 
@@ -64,5 +59,72 @@ $(document).ready(function () {
        }
 
     })
+
+
+
+
+/* enviando informacion a la base de dato */
+
+$('#task-form').submit(function (e) {
+    /* falta agregar cantidad */
+        const postData={
+            name:$('#name').val(),
+            description:$('#description').val()
+    
+        }
+         
+        $.post('./includes/art-add.php',postData,function (response) {
+    
+         /*    renglonFactura(); */
+            $('#task-form').trigger('reset')
+            
+        })
+    
+        e.preventDefault()
+        
+    })
+    
+ /*    function renglonFactura() {
+    
+        $.ajax({
+            url:'./includes/task-list.php',
+            type:'GET',
+            success:function (response) {
+        
+                    let tasks= JSON.parse(response)       
+                    let template=''
+        
+                    tasks.forEach(task => {
+        
+                     template += `
+                    <tr>
+                        <td>${task.id}</td>
+                        <td>${task.task}</td>
+                        <td>${task.description}</td>
+                    </tr>`
+                        
+                    });
+        
+                    $('#tasks').html(template)
+                
+            }
+        })
+        
+    }
+    
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
     
 })

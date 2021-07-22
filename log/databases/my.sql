@@ -42,7 +42,7 @@ CREATE TABLE configuracion (
 );
 
 
-INSERT INTO  configuracion VALUES (0,'NOMBRE DE LA EMRPESA','j-99999-1','trabajo','+58 0412-2027622','Venezuela',16,3000000);
+INSERT INTO  configuracion VALUES (0,'NOMBRE DE LA EMRPESA','j-99999-1','trabajo','+58 0412-2027622','Venezuela',16,3800000);
 
 CREATE TABLE clientes (
   id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
@@ -92,5 +92,40 @@ CREATE TABLE reng_fact(
    FOREIGN KEY(id) REFERENCES facturas(id)
 )
  */
+
+ create table factura(
+
+    ID  INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    descripcion varchar(35),
+    cliente VARCHAR (90),
+    precio FLOAT not null,
+    cantidad int not null,
+    iva int not null,
+    ffecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+
+    
+
+
+
+);
+
+
+create table reng_fact (
+
+    ID  INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    ID_FACTURA int(255) ,
+    articulo VARCHAR (90) not null,
+    cantidad int not null,
+    precio int,
+    ref int,
+    iva int not null,
+    fecha datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    
+
+    CONSTRAINT fk_reng_fact FOREIGN KEY(ID_FACTURA) REFERENCES factura(id)
+
+
+
+);
 
 
