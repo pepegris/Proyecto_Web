@@ -28,6 +28,25 @@
 
                         <form id="task-form">
 
+                            <!-- <div class="form-group">
+
+                                <label for="">Cliente</label>
+                                <select name="" id="" class="form-control">
+                                    <?php
+                                    require_once 'includes/database.php';
+                                    $sql = "SELECT * FROM clientes";
+                                    $res = pg_query($conn, $sql);
+
+                                    while ($row = pg_fetch_array($res)) {
+                                        $cliente = $row['nombre'];
+                                        $rif_ci = $row['ci']; ?>
+
+                                        <option value="<?= $cliente ?>"><?= $cliente ?> / <?= $rif_ci ?> </option>
+                                    <?php } ?>
+
+                                </select>
+                            </div> -->
+
                             <div class="form-group">
                                 <input type="text" name="" id="search" placeholder="Articulo" class="form-control">
                                 <input type="number" name="" id="cantidad" placeholder="Cantidad" class="form-control">
@@ -44,10 +63,10 @@
 
                 <div class="card my-4" id="task-result">
                     <div class="card-body">
-                      <h5>Resultado</h5>
+                        <h5>Resultado</h5>
                         <ul id="container">
-                          
-                            
+
+
                         </ul>
                     </div>
                 </div>

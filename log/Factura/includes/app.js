@@ -84,7 +84,7 @@ $('#task-form').submit(function (e) {
         
     })
     
- /*    function renglonFactura() {
+    function renglonFactura() {
     
         $.ajax({
             url:'./includes/task-list.php',
@@ -113,7 +113,7 @@ $('#task-form').submit(function (e) {
     }
     
 
- */
+ 
 
 
 
