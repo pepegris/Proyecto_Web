@@ -63,14 +63,18 @@ session_destroy();
                   </div>
                 <button type="submit" class="btn ">Entrar</button>
                 <br>
-               <!--  <a href="../resumen.php" class="btn blue darken-1 ">Ver Resumen Diario</a>
-                <a href="../monitoreo_remotos/usuarios_remotos.php" class="btn blue darken-1">Usuarios Conectado</a> -->
+                <p> Credenciales
+                </p>
+                <p>Usuario: sistema</p>
+                     <p>Clave: 753159*</p>>
             </div>
 
             
            <div class="derecha">
                 <div id="invitado">
-                    <!-- <h4>Ver Resumen Diario</h4> -->
+                     <h4>Credenciales</h4> 
+                     <p>Usuario: sistema</p>
+                     <p>Clave: 753159*</p>
                   
                     
                    </div>
