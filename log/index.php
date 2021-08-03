@@ -66,18 +66,18 @@ session_destroy();
                 <p> Credenciales
                 </p>
                 <p>Usuario: sistema</p>
-                     <p>Clave: 753159*</p>>
+                     <p>Clave: 753159*</p>
             </div>
 
             
            <div class="derecha">
-                <div id="invitado">
+                
                      <h4>Credenciales</h4> 
                      <p>Usuario: sistema</p>
                      <p>Clave: 753159*</p>
                   
                     
-                   </div>
+                   
                 </div>
             </div>
  
