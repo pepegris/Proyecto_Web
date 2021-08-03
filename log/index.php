@@ -63,23 +63,24 @@ session_destroy();
                   </div>
                 <button type="submit" class="btn ">Entrar</button>
                 <br>
-                <p> Credenciales
-                </p>
-                <p>Usuario: sistema</p>
-                     <p>Clave: 753159*</p>
+                
             </div>
 
             
            <div class="derecha">
-                
+
+           <h4>Credenciales</h4>
+                <p>Usuario: sistema</p>
+                     <p>Clave: 753159*</p>
+              <!--   <div id="invitado">
                      <h4>Credenciales</h4> 
                      <p>Usuario: sistema</p>
                      <p>Clave: 753159*</p>
                   
                     
-                   
+                   </div> -->
                 </div>
-            </div>
+            </div> 
  
         
             
